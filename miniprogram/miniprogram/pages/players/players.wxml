@@ -1,0 +1,39 @@
+<view wx:if="{{loading}}" class="empty">加载中…</view>
+
+<block wx:for="{{groups}}" wx:key="code" wx:for-item="g">
+  <view class="team-head">
+    <text class="team-flag">{{g.flag}}</text>
+    <text class="t-name">{{g.nameZh}}</text>
+    <text class="t-group" wx:if="{{g.group}}">{{g.group}}组</text>
+    <text class="t-count">{{g.players.length}} 名球员</text>
+  </view>
+  <view class="card plist">
+    <view class="player-row" wx:for="{{g.players}}" wx:key="name" wx:for-item="p"
+          data-team="{{g.code}}" bindtap="onPlayerTap">
+      <view class="p-num">{{p.num}}</view>
+      <view class="p-main">
+        <view class="p-name">{{p.nameZh}}
+          <text class="tag-departed" wx:if="{{p.departed}}">{{p.clubNote}}</text>
+        </view>
+        <view class="p-en">{{p.name}}</view>
+      </view>
+      <view class="p-pos">{{p.pos}}</view>
+    </view>
+  </view>
+</block>
+
+<view wx:if="{{notInCup.length}}">
+  <view class="section-title">未参加本届世界杯的球员（{{notInCup.length}}）</view>
+  <view class="card plist">
+    <view class="player-row" wx:for="{{notInCup}}" wx:key="name" wx:for-item="p">
+      <view class="p-num dim">{{p.flag}}</view>
+      <view class="p-main">
+        <view class="p-name dim">{{p.nameZh}}
+          <text class="tag-departed" wx:if="{{p.departed}}">{{p.clubNote}}</text>
+        </view>
+        <view class="p-en">{{p.name}} · <text class="warn">{{p.note}}</text></view>
+      </view>
+      <view class="p-pos">{{p.pos}}</view>
+    </view>
+  </view>
+</view>

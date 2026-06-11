@@ -1,0 +1,18 @@
+<view wx:if="{{loading}}" class="empty">加载中…</view>
+<view wx:elif="{{!cols.length}}" class="empty">淘汰赛对阵尚未产生，小组赛结束后自动更新</view>
+
+<scroll-view scroll-x class="bracket-wrap" enhanced show-scrollbar="{{false}}" wx:else>
+  <view class="bracket">
+    <view class="b-col" wx:for="{{cols}}" wx:key="title" wx:for-item="col">
+      <view class="b-col-title">{{col.title}}</view>
+      <view class="b-tie {{tie.tracked ? 'tracked' : ''}}" wx:for="{{col.ties}}" wx:key="meta" wx:for-item="tie">
+        <view class="b-line" wx:for="{{tie.lines}}" wx:key="name" wx:for-item="l">
+          <text class="b-flag">{{l.flag}}</text>
+          <text class="b-name {{l.tbd ? 'tbd' : ''}}">{{l.name}}</text>
+          <text class="b-score">{{l.score}}</text>
+        </view>
+        <view class="b-meta">{{tie.meta}}<text wx:if="{{tie.live}}" class="b-live"> · 进行中</text></view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

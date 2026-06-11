@@ -1,0 +1,15 @@
+{
+  "compileType": "miniprogram",
+  "appid": "touristappid",
+  "projectname": "worldcup-mancity",
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "urlCheck": true
+  },
+  "libVersion": "3.0.0"
+}

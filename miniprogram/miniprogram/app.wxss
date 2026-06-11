@@ -1,0 +1,60 @@
+/* 全局样式 —— FotMob 风格深色 + 曼城蓝 */
+page {
+  background: #15171c;
+  color: #e9ecf1;
+  font-size: 30rpx;
+  line-height: 1.5;
+}
+
+.card {
+  background: #1f232b;
+  border: 1rpx solid #2e3440;
+  border-radius: 28rpx;
+  margin: 0 24rpx 20rpx;
+  padding: 24rpx 28rpx;
+}
+
+.sub { color: #97a0ad; }
+.accent { color: #6cabdd; }
+.warn { color: #f0a020; }
+
+.section-title {
+  margin: 36rpx 32rpx 16rpx;
+  font-size: 26rpx;
+  color: #97a0ad;
+}
+.section-title.today { color: #6cabdd; font-weight: 700; }
+
+.empty {
+  text-align: center;
+  color: #97a0ad;
+  padding: 80rpx 40rpx;
+  font-size: 27rpx;
+}
+
+.banner {
+  margin: 20rpx 32rpx 0;
+  padding: 16rpx 24rpx;
+  border-radius: 20rpx;
+  background: rgba(240, 160, 32, 0.12);
+  border: 1rpx solid rgba(240, 160, 32, 0.4);
+  color: #f0a020;
+  font-size: 25rpx;
+}
+
+.updated-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16rpx 32rpx 0;
+  font-size: 23rpx;
+  color: #97a0ad;
+}
+.btn-refresh {
+  border: 1rpx solid #3d6a8a;
+  background: rgba(108, 171, 221, 0.12);
+  color: #6cabdd;
+  border-radius: 32rpx;
+  padding: 8rpx 28rpx;
+  font-size: 26rpx;
+}

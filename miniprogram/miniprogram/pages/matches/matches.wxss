@@ -1,0 +1,65 @@
+.chips {
+  white-space: nowrap;
+  padding: 24rpx 32rpx 8rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+.chip {
+  display: inline-block;
+  padding: 10rpx 26rpx;
+  border-radius: 32rpx;
+  font-size: 26rpx;
+  background: #262b35;
+  color: #97a0ad;
+  border: 1rpx solid #2e3440;
+  margin-right: 16rpx;
+}
+.chip.active {
+  background: rgba(108, 171, 221, 0.18);
+  color: #6cabdd;
+  border-color: #3d6a8a;
+}
+
+.match-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 23rpx;
+  color: #97a0ad;
+  margin-bottom: 16rpx;
+}
+.match-stage { color: #6cabdd; font-weight: 600; }
+
+.match-body { display: flex; align-items: center; }
+.match-teams { flex: 1; min-width: 0; }
+.team-line { display: flex; align-items: center; padding: 6rpx 0; }
+.team-line.loser .team-name, .team-line.loser .team-score { color: #97a0ad; font-weight: 500; }
+.team-flag { font-size: 38rpx; width: 52rpx; text-align: center; }
+.team-name { font-size: 31rpx; font-weight: 600; margin-left: 16rpx; }
+.team-name.tbd { color: #97a0ad; font-weight: 400; font-size: 28rpx; }
+.team-score { font-size: 32rpx; font-weight: 700; margin-left: auto; padding-right: 24rpx; }
+
+.match-side {
+  width: 150rpx;
+  text-align: center;
+  border-left: 1rpx solid #2e3440;
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ko-time { font-size: 32rpx; font-weight: 700; }
+.ko-date { font-size: 22rpx; color: #97a0ad; margin-top: 4rpx; }
+.ft-tag { color: #97a0ad; font-size: 24rpx; }
+.live-tag { color: #ff4d4f; font-size: 24rpx; font-weight: 700; }
+
+.match-venue { font-size: 23rpx; color: #97a0ad; margin-top: 16rpx; }
+.match-players { display: flex; flex-wrap: wrap; margin-top: 14rpx; }
+.pchip {
+  font-size: 23rpx;
+  padding: 4rpx 18rpx;
+  border-radius: 20rpx;
+  background: rgba(108, 171, 221, 0.13);
+  color: #6cabdd;
+  margin: 0 12rpx 10rpx 0;
+}
+.pchip.departed { background: rgba(240, 160, 32, 0.13); color: #f0a020; }

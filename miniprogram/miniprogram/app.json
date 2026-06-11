@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/matches/matches",
+    "pages/players/players",
+    "pages/bracket/bracket"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#18202a",
+    "navigationBarTitleText": "蓝月亮看世界杯",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#15171c",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#97a0ad",
+    "selectedColor": "#6cabdd",
+    "backgroundColor": "#1a1f27",
+    "borderStyle": "black",
+    "list": [
+      { "pagePath": "pages/matches/matches", "text": "📅 赛程" },
+      { "pagePath": "pages/players/players", "text": "👕 球员" },
+      { "pagePath": "pages/bracket/bracket", "text": "🏆 对阵图" }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

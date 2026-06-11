@@ -1,0 +1,55 @@
+<view class="updated-bar">
+  <text>{{updatedText}}</text>
+  <view class="btn-refresh" bindtap="onRefreshTap">↻ 刷新</view>
+</view>
+
+<view class="banner" wx:if="{{placeholder}}">⚠️ 当前为占位示例数据，正式数据更新后此提示自动消失</view>
+
+<scroll-view scroll-x class="chips" enhanced show-scrollbar="{{false}}">
+  <view
+    wx:for="{{chips}}" wx:key="key"
+    class="chip {{filter === item.key ? 'active' : ''}}"
+    data-key="{{item.key}}" bindtap="onChipTap">{{item.label}}</view>
+</scroll-view>
+
+<view wx:if="{{loading}}" class="empty">加载中…</view>
+<view wx:elif="{{!sections.length}}" class="empty">该筛选下暂无比赛</view>
+
+<block wx:for="{{sections}}" wx:key="key" wx:for-item="sec">
+  <view class="section-title {{sec.isToday ? 'today' : ''}}">{{sec.isToday ? '今天 · ' : ''}}{{sec.dateLabel}}</view>
+  <view class="card" wx:for="{{sec.items}}" wx:key="no" wx:for-item="m">
+    <view class="match-top">
+      <text class="match-stage">{{m.stageText}}</text>
+      <text class="sub">第{{m.no}}场</text>
+    </view>
+    <view class="match-body">
+      <view class="match-teams">
+        <view class="team-line {{m.hLoser ? 'loser' : ''}}">
+          <text class="team-flag">{{m.homeFlag}}</text>
+          <text class="team-name {{m.homeTbd ? 'tbd' : ''}}">{{m.homeName}}</text>
+          <text class="team-score">{{m.hScore}}</text>
+        </view>
+        <view class="team-line {{m.aLoser ? 'loser' : ''}}">
+          <text class="team-flag">{{m.awayFlag}}</text>
+          <text class="team-name {{m.awayTbd ? 'tbd' : ''}}">{{m.awayName}}</text>
+          <text class="team-score">{{m.aScore}}</text>
+        </view>
+      </view>
+      <view class="match-side">
+        <block wx:if="{{m.status === 'live'}}"><text class="live-tag">● 进行中</text></block>
+        <block wx:elif="{{m.status === 'finished'}}">
+          <text class="ft-tag">已结束</text>
+          <text class="ko-date">{{m.md}} {{m.time}}</text>
+        </block>
+        <block wx:else>
+          <text class="ko-time">{{m.time}}</text>
+          <text class="ko-date">北京时间</text>
+        </block>
+      </view>
+    </view>
+    <view class="match-venue" wx:if="{{m.venueText}}">{{m.venueText}}</view>
+    <view class="match-players" wx:if="{{m.chips.length}}">
+      <text wx:for="{{m.chips}}" wx:key="nameZh" wx:for-item="c" class="pchip {{c.departed ? 'departed' : ''}}">{{c.nameZh}}</text>
+    </view>
+  </view>
+</block>
