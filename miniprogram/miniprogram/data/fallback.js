@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-11T14:39:25.583Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-16T17:07:58.783Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-06-11T14:39:25.583Z",
+ "lastUpdated": "2026-06-16T17:07:58.783Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -665,9 +665,9 @@ module.exports = {
    "away": "RSA",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 2,
+   "aScore": 0,
+   "status": "finished",
    "utc": "2026-06-11T19:00:00Z",
    "venue": "阿兹特克体育场",
    "city": "墨西哥城"
@@ -681,9 +681,9 @@ module.exports = {
    "away": "CZE",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 2,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-12T02:00:00Z",
    "venue": "阿克伦体育场",
    "city": "瓜达拉哈拉"
@@ -697,9 +697,9 @@ module.exports = {
    "away": "BIH",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-12T19:00:00Z",
    "venue": "BMO球场",
    "city": "多伦多"
@@ -713,9 +713,9 @@ module.exports = {
    "away": "PAR",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 4,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-13T01:00:00Z",
    "venue": "SoFi体育场",
    "city": "洛杉矶"
@@ -729,9 +729,9 @@ module.exports = {
    "away": "SUI",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-13T19:00:00Z",
    "venue": "李维斯体育场",
    "city": "旧金山湾区"
@@ -745,9 +745,9 @@ module.exports = {
    "away": "MAR",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-13T22:00:00Z",
    "venue": "大都会人寿体育场",
    "city": "纽约(东卢瑟福)"
@@ -761,9 +761,9 @@ module.exports = {
    "away": "SCO",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-14T01:00:00Z",
    "venue": "吉列体育场",
    "city": "波士顿(福克斯堡)"
@@ -777,9 +777,9 @@ module.exports = {
    "away": "TUR",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 2,
+   "aScore": 0,
+   "status": "finished",
    "utc": "2026-06-14T04:00:00Z",
    "venue": "BC Place体育馆",
    "city": "温哥华"
@@ -793,9 +793,9 @@ module.exports = {
    "away": "CUW",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 7,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-14T17:00:00Z",
    "venue": "NRG体育场",
    "city": "休斯顿"
@@ -809,12 +809,25 @@ module.exports = {
    "away": "JPN",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 2,
+   "aScore": 2,
+   "status": "finished",
    "utc": "2026-06-14T20:00:00Z",
    "venue": "AT&T体育场",
-   "city": "阿灵顿(达拉斯)"
+   "city": "阿灵顿(达拉斯)",
+   "stats": {
+    "ake": {
+     "min": 9,
+     "g": 0,
+     "a": 0
+    },
+    "reijnders": {
+     "r": 6.8,
+     "min": 70,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 9,
@@ -825,9 +838,9 @@ module.exports = {
    "away": "ECU",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 0,
+   "status": "finished",
    "utc": "2026-06-14T23:00:00Z",
    "venue": "林肯金融球场",
    "city": "费城"
@@ -841,9 +854,9 @@ module.exports = {
    "away": "TUN",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 5,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-15T02:00:00Z",
    "venue": "BBVA体育场",
    "city": "蒙特雷"
@@ -857,12 +870,20 @@ module.exports = {
    "away": "CPV",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 0,
+   "status": "finished",
    "utc": "2026-06-15T16:00:00Z",
    "venue": "梅赛德斯-奔驰体育场",
-   "city": "亚特兰大"
+   "city": "亚特兰大",
+   "stats": {
+    "rodri": {
+     "r": 7.8,
+     "min": 87,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 16,
@@ -873,12 +894,32 @@ module.exports = {
    "away": "EGY",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-15T19:00:00Z",
    "venue": "流明球场",
-   "city": "西雅图"
+   "city": "西雅图",
+   "stats": {
+    "doku": {
+     "r": 6.4,
+     "min": 86,
+     "g": 0,
+     "a": 0
+    },
+    "kdb": {
+     "r": 7,
+     "min": 86,
+     "g": 0,
+     "a": 0
+    },
+    "marmoush": {
+     "r": 7.2,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 13,
@@ -889,9 +930,9 @@ module.exports = {
    "away": "URU",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-15T22:00:00Z",
    "venue": "硬石体育场",
    "city": "迈阿密"
@@ -905,9 +946,9 @@ module.exports = {
    "away": "NZL",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 2,
+   "aScore": 2,
+   "status": "finished",
    "utc": "2026-06-16T01:00:00Z",
    "venue": "SoFi体育场",
    "city": "洛杉矶"

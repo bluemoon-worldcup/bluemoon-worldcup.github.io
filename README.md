@@ -35,11 +35,14 @@ worldcup-mancity/
    （赛程骨架 fixturedownload.com + ESPN 增强 + FotMob 评分，任一失败不影响其余）
 3. **小程序云函数**：定时触发器每30分钟自动拉取并写入云数据库（小程序路线已暂停，代码保留）
 
-## 球员评分
+## 球员数据（评分 / 出场分钟 / 进球 / 助攻）
 
-- 来源：FotMob 公开接口（`/api/data/matchDetails`），比赛结束后自动出现
-- 展示：比赛卡片上每名球员的评分徽章（≥8.0 绿 / 6.5-7.9 黄 / <6.5 橙红），球员页显示世界杯场均分
-- 自动抓取失效时可在 `tools/ratings-override.json` 手动维护，格式见文件内说明
+- 来源：FotMob 公开接口（`/api/data/matchDetails` 的 `playerStats` → 评分/分钟/进球/助攻），比赛结束后自动出现
+- 数据结构：`m.stats = { 球员id: { r:评分, min:分钟, g:进球, a:助攻 } }`
+- 展示：
+  - 比赛卡片每名球员标签：`⚽进球 🅰助攻 出场分钟 评分徽章`（≥8.0 绿 / 6.5-7.9 黄 / <6.5 橙红）；已结束但未出场标"未登场"
+  - 球员页：评分徽章为世界杯场均分，下方累计行 `出场N · M′ · X球 Y助`
+- 三层来源：① 浏览器直连 FotMob 实时抓取（结果存 localStorage，看过的比赛离线也在）② 本地脚本烤入 `data.js` ③ 手动覆盖 `tools/ratings-override.json`（支持数字或 `{r,min,g,a}`）
 - 测试：`node tools/test-ratings.mjs`（用近期已结束的真实比赛验证全链路）
 
 ## 访问统计

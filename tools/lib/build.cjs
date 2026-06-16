@@ -4,7 +4,7 @@
 // 增强：ESPN 非官方API（实时比分/比赛状态/真实球场，尽力而为）
 // ============================================================
 const { TEAMS, PLAYERS, venueZh, placeholderZh, resolveTeam, ALIASES } = require('./data.cjs')
-const { fetchRatings } = require('./ratings.cjs')
+const { fetchStats } = require('./ratings.cjs')
 
 const FD_URL = 'https://fixturedownload.com/feed/json/fifa-world-cup-2026'
 const ESPN_URL = 'https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200'
@@ -103,8 +103,20 @@ function overlayESPN(matches, espn) {
   return applied
 }
 
+// 单个球员覆盖项归一化：数字 -> {r}, 对象 -> {r,min,g,a} 原样
+function normOverridePlayer(v) {
+  if (v == null) return null
+  if (typeof v === 'number') return { r: v }
+  const rec = {}
+  if (v.r != null) rec.r = Number(v.r)
+  if (v.min != null) rec.min = Number(v.min)
+  if (v.g != null) rec.g = Number(v.g)
+  if (v.a != null) rec.a = Number(v.a)
+  return Object.keys(rec).length ? rec : null
+}
+
 // 主入口：fetchJson(url) 由调用方提供（本地脚本用 fetch，云函数用 axios）
-// opts.ratingsOverride: 手动评分覆盖 { "<场次编号>": {playerId: rating} }
+// opts.ratingsOverride: 手动覆盖 { "<场次编号>": {playerId: 评分 | {r,min,g,a}} }
 async function buildPayload(fetchJson, log, opts) {
   log = log || (() => {})
   opts = opts || {}
@@ -124,18 +136,24 @@ async function buildPayload(fetchJson, log, opts) {
     log('ESPN 不可达，跳过增强: ' + e.message)
   }
 
-  // 赛后评分（FotMob，失败不影响赛程）+ 手动覆盖
-  let ratingsMap = {}
+  // 赛后球员数据（FotMob 评分/分钟/进球/助攻，失败不影响赛程）+ 手动覆盖
+  let statsMap = {}
   try {
-    ratingsMap = await fetchRatings(fetchJson, matches, log)
-    log('FotMob 评分: ' + Object.keys(ratingsMap).length + ' 场')
+    statsMap = await fetchStats(fetchJson, matches, log)
+    log('FotMob 球员数据: ' + Object.keys(statsMap).length + ' 场')
   } catch (e) {
-    log('FotMob 评分失败: ' + e.message)
+    log('FotMob 球员数据失败: ' + e.message)
   }
   const override = opts.ratingsOverride || {}
   matches.forEach(m => {
-    const r = Object.assign({}, ratingsMap[m.no], override[m.no] || override[String(m.no)])
-    if (Object.keys(r).length) m.ratings = r
+    const auto = statsMap[m.no] || {}
+    const ovr = override[m.no] || override[String(m.no)] || {}
+    const merged = {}
+    for (const pid of new Set([].concat(Object.keys(auto), Object.keys(ovr)))) {
+      const rec = Object.assign({}, auto[pid], normOverridePlayer(ovr[pid]))
+      if (Object.keys(rec).length) merged[pid] = rec
+    }
+    if (Object.keys(merged).length) m.stats = merged
   })
 
   return {

@@ -114,6 +114,14 @@
   .rt-hi { background: #2ecc71; }
   .rt-mid { background: #f0c020; }
   .rt-low { background: #ff6b4a; }
+  /* 进球/助攻/出场分钟 小标记 */
+  .pchip .gG { color: #2ecc71; font-weight: 700; }
+  .pchip .gA { color: var(--accent); font-weight: 700; }
+  .pchip .mins { color: var(--sub); font-size: 10.5px; }
+  .pchip.dnp { opacity: .5; }
+  .pchip .dnp-tag { color: var(--sub); font-size: 10.5px; }
+  .p-stat { font-size: 11.5px; color: var(--accent); margin-top: 3px; }
+  .p-stat .ga { color: #2ecc71; }
 
   /* ---------- 球员 ---------- */
   .team-head {
@@ -295,20 +303,38 @@ function stageText(m) {
   return STAGE_LABEL[m.stage] || m.stage;
 }
 function ratingClass(r) { return r >= 8 ? "rt-hi" : r >= 6.5 ? "rt-mid" : "rt-low"; }
-// 每名球员的场均评分（已结束且有评分的比赛）
-function avgRatings() {
-  const sums = {};
+
+// 某场某球员的数据小标记：进球⚽ 助攻🅰 出场分钟 评分徽章
+function statBits(s) {
+  if (!s) return "";
+  let b = "";
+  if (s.g) b += `<span class="gG">⚽${s.g > 1 ? "×" + s.g : ""}</span>`;
+  if (s.a) b += `<span class="gA">🅰${s.a > 1 ? "×" + s.a : ""}</span>`;
+  if (s.min != null) b += `<span class="mins">${s.min}'</span>`;
+  if (s.r != null) b += `<span class="rt ${ratingClass(s.r)}">${Number(s.r).toFixed(1)}</span>`;
+  return b;
+}
+// 该场是否已拿到某队的球员数据（用于区分"未登场"和"数据未到"）
+function teamHasStats(m, teamCode) {
+  return !!(m.stats && state.data.players.some(p => p.inSquad && p.team === teamCode && m.stats[p.id]));
+}
+// 每名球员的赛事累计：出场场次/总分钟/总进球/总助攻/场均评分
+function aggStats() {
+  const agg = {};
   state.data.matches.forEach(m => {
-    if (!m.ratings) return;
-    Object.keys(m.ratings).forEach(id => {
-      (sums[id] = sums[id] || []).push(m.ratings[id]);
+    if (!m.stats) return;
+    Object.keys(m.stats).forEach(id => {
+      const s = m.stats[id];
+      const a = agg[id] || (agg[id] = { apps: 0, min: 0, g: 0, a: 0, rs: [] });
+      a.apps++;
+      if (s.min != null) a.min += s.min;
+      if (s.g) a.g += s.g;
+      if (s.a) a.a += s.a;
+      if (s.r != null) a.rs.push(s.r);
     });
   });
-  const avg = {};
-  Object.keys(sums).forEach(id => {
-    avg[id] = sums[id].reduce((a, b) => a + b, 0) / sums[id].length;
-  });
-  return avg;
+  Object.values(agg).forEach(a => { a.avgR = a.rs.length ? a.rs.reduce((x, y) => x + y, 0) / a.rs.length : null; });
+  return agg;
 }
 function toast(msg) {
   const t = $("#toast");
@@ -353,9 +379,12 @@ function matchCardHTML(m) {
 
   const involved = state.data.players.filter(pl => pl.inSquad && (pl.team === m.home || pl.team === m.away));
   const chips = involved.map(pl => {
-    const r = m.ratings && m.ratings[pl.id];
-    const badge = r != null ? `<span class="rt ${ratingClass(r)}">${Number(r).toFixed(1)}</span>` : "";
-    return `<span class="pchip${pl.club === "departed" ? " departed" : ""}">${esc(pl.nameZh)}${badge}</span>`;
+    const s = m.stats && m.stats[pl.id];
+    let cls = "pchip" + (pl.club === "departed" ? " departed" : "");
+    let suffix = statBits(s);
+    // 比赛已结束、且该队数据已到、但此人无记录 -> 未登场
+    if (!s && fin && teamHasStats(m, pl.team)) { cls += " dnp"; suffix = `<span class="dnp-tag">未登场</span>`; }
+    return `<span class="${cls}">${esc(pl.nameZh)}${suffix}</span>`;
   }).join("");
 
   return `<div class="card">
@@ -411,7 +440,7 @@ function renderMatches() {
 function renderPlayers() {
   const tracked = [...trackedTeams()];
   tracked.sort((a, b) => (team(a).group || "Z").localeCompare(team(b).group || "Z") || a.localeCompare(b));
-  const avg = avgRatings();
+  const agg = aggStats();
 
   let html = "";
   tracked.forEach(code => {
@@ -423,7 +452,7 @@ function renderPlayers() {
       ${t.group && t.group !== "?" ? `<span class="t-group">${esc(t.group)}组</span>` : ""}
       <span class="p-note" style="margin-left:auto">${ps.length} 名球员</span>
     </div><div class="card" style="padding:4px 14px">`;
-    ps.forEach(pl => { html += playerRowHTML(pl, false, avg[pl.id]); });
+    ps.forEach(pl => { html += playerRowHTML(pl, false, agg[pl.id]); });
     html += `</div>`;
   });
 
@@ -441,9 +470,17 @@ function renderPlayers() {
   });
 }
 
-function playerRowHTML(pl, noClick, avgRating) {
+function playerRowHTML(pl, noClick, ag) {
   const t = pl.team && team(pl.team);
-  const rt = avgRating != null ? `<span class="rt ${ratingClass(avgRating)}" title="场均评分">${avgRating.toFixed(1)}</span>` : "";
+  const rt = ag && ag.avgR != null ? `<span class="rt ${ratingClass(ag.avgR)}" title="场均评分">${ag.avgR.toFixed(1)}</span>` : "";
+  // 累计数据行：出场N · M′ · X球 Y助（有进球/助攻时高亮）
+  let statLine = "";
+  if (ag && ag.apps) {
+    const ga = (ag.g || ag.a)
+      ? `<span class="ga">${ag.g ? ag.g + "球" : ""}${ag.g && ag.a ? " " : ""}${ag.a ? ag.a + "助" : ""}</span>`
+      : "0球0助";
+    statLine = `<div class="p-stat">出场 ${ag.apps} · ${ag.min}′ · ${ga}</div>`;
+  }
   return `<div class="player-row" ${noClick || !pl.inSquad ? "" : `data-team="${pl.team}"`}>
     <div class="p-num">${pl.num != null ? pl.num : "–"}</div>
     <div class="p-main">
@@ -452,6 +489,7 @@ function playerRowHTML(pl, noClick, avgRating) {
         ${rt}
       </div>
       <div class="p-en">${esc(pl.name)}${!pl.inSquad && pl.note ? ` · <span style="color:var(--warn)">${esc(pl.note)}</span>` : ""}</div>
+      ${statLine}
     </div>
     <div class="p-pos">${esc(pl.pos)}${!pl.inSquad && t ? " · " + t.flag : ""}</div>
   </div>`;
@@ -517,9 +555,29 @@ function switchTab(tab) {
 }
 
 // ================= 数据加载 / 刷新 =================
+// 球员数据本地缓存：{ 场次编号: {playerId:{r,min,g,a}} }，让看过的比赛数据离线也在
+function loadStatsCache() { try { return JSON.parse(localStorage.getItem("wc26_stats")) || {}; } catch (e) { return {}; } }
+function saveStatsCache(c) { try { localStorage.setItem("wc26_stats", JSON.stringify(c)); } catch (e) {} }
+
+function normalizeData(d) {
+  // 兼容旧结构 m.ratings({id:评分}) -> m.stats({id:{r}})
+  d.matches.forEach(m => {
+    if (m.ratings && !m.stats) {
+      m.stats = {};
+      Object.keys(m.ratings).forEach(id => { m.stats[id] = { r: m.ratings[id] }; });
+    }
+  });
+  // 合并本地缓存（内置/远程数据优先，缓存补缺）
+  const cache = loadStatsCache();
+  d.matches.forEach(m => {
+    if (cache[m.no]) m.stats = Object.assign({}, cache[m.no], m.stats);
+  });
+  return d;
+}
+
 function applyData(d) {
   if (!d || !Array.isArray(d.matches) || !d.teams || !Array.isArray(d.players)) throw new Error("数据格式不正确");
-  state.data = d;
+  state.data = normalizeData(d);
   try { localStorage.setItem("wc26_data", JSON.stringify(d)); } catch (e) {}
   renderAll();
 }
@@ -588,24 +646,60 @@ function normNameJs(s) {
     .replace(/[̀-ͯ]/g, "").replace(/[^a-z ]/g, " ")
     .replace(/ +/g, " ").trim();
 }
-function fotmobPlayerMatch(x, our) {
+// 匹配档位：0=全名精确，1=姓氏+号码，2=词元包含（短名按整词，避免 Rodri~Rodrigo 误配）
+function fmMatchTier(x, our) {
   const xn = normNameJs(x.name || ((x.firstName || "") + " " + (x.lastName || "")));
   const on = normNameJs(our.name);
-  if (!xn || !on) return false;
-  if (xn === on) return true;
+  if (!xn || !on) return Infinity;
+  if (xn === on) return 0;
+  const xt = xn.split(" ").filter(Boolean), ot = on.split(" ").filter(Boolean);
   const num = x.shirtNumber != null ? Number(x.shirtNumber) : null;
-  if (xn.split(" ").pop() === on.split(" ").pop() && our.num != null && num === our.num) return true;
-  if (xn.length >= 5 && on.length >= 5 && (xn.includes(on) || on.includes(xn))) return true;
-  return false;
+  if (xt.length && ot.length && xt[xt.length - 1] === ot[ot.length - 1] && our.num != null && num === our.num) return 1;
+  const subset = (a, b) => a.length && a.every(t => b.includes(t));
+  if ((ot.length <= xt.length && subset(ot, xt)) || (xt.length <= ot.length && subset(xt, ot))) return 2;
+  return Infinity;
 }
-async function refreshRatings() {
+// 一队阵容里为某球员挑最佳匹配：档位最小者胜，同档优先号码一致
+function fmBestMatch(pool, our) {
+  let best = null, bestTier = Infinity, bestNumOk = false;
+  for (const x of pool) {
+    const t = fmMatchTier(x, our);
+    if (t === Infinity) continue;
+    const numOk = x.shirtNumber != null && our.num != null && Number(x.shirtNumber) === our.num;
+    if (t < bestTier || (t === bestTier && numOk && !bestNumOk)) { best = x; bestTier = t; bestNumOk = numOk; }
+  }
+  return best;
+}
+// playerStats 缺"出场分钟"时用换人事件推算（full=满场分钟）
+function fmMinutesFromPerf(hit, full) {
+  const evs = (hit.performance && hit.performance.substitutionEvents) || [];
+  const subIn = evs.find(e => e.type === "subIn");
+  const subOut = evs.find(e => e.type === "subOut");
+  if (subIn && subOut) return Math.max(0, subOut.time - subIn.time);
+  if (subIn) return Math.max(0, full - subIn.time);
+  if (subOut) return Math.max(0, subOut.time);
+  return full;
+}
+// 从 playerStats[id] 的 "Top stats" 分组里读某字段
+function fmTopStat(ps, label) {
+  if (!ps || !Array.isArray(ps.stats)) return null;
+  const grp = ps.stats.find(g => g && g.title === "Top stats") || ps.stats[0];
+  const cell = grp && grp.stats && grp.stats[label];
+  const v = cell && cell.stat && cell.stat.value;
+  return v == null ? null : Number(v);
+}
+
+async function refreshStats() {
   const tracked = trackedTeams();
+  const cache = loadStatsCache();
   const now = Date.now();
-  const targets = state.data.matches.filter(m =>
-    m.status === "finished" && m.home && m.away && !m.ratings &&
-    (tracked.has(m.home) || tracked.has(m.away)) &&
-    now - Date.parse(m.utc) < 7 * 86400000   // 只补最近7天，更早的场次靠内置数据
-  ).slice(0, 8);
+  // 已结束、涉及曼城球员；缓存没有的，或刚结束12小时内的（FotMob 数据陆续补全，重抓合并）。最近优先，每次最多8场
+  const targets = state.data.matches
+    .filter(m => m.status === "finished" && m.home && m.away &&
+      (tracked.has(m.home) || tracked.has(m.away)) &&
+      (!cache[m.no] || now - Date.parse(m.utc) < 12 * 3600 * 1000))
+    .sort((a, b) => Date.parse(b.utc) - Date.parse(a.utc))
+    .slice(0, 8);
   if (!targets.length) return 0;
 
   const d = JSON.parse(JSON.stringify(state.data));
@@ -639,19 +733,38 @@ async function refreshRatings() {
     catch (e) { continue; }
     const lu = det && det.content && det.content.lineup;
     if (!lu) continue;
-    const ratings = {};
+    const ps = (det.content && det.content.playerStats) || {};
+    const full = m.stage && m.stage !== "group" ? 120 : 90;
+    const stats = {};
     [[lu.homeTeam, m.home], [lu.awayTeam, m.away]].forEach(([tl, code]) => {
       if (!tl) return;
       const pool = [].concat(tl.starters || [], tl.subs || []);
       state.data.players.filter(p => p.inSquad && p.team === code).forEach(our => {
-        const hit = pool.find(x => fotmobPlayerMatch(x, our));
-        const r = hit && hit.performance && hit.performance.rating;
-        if (r != null && !isNaN(Number(r))) ratings[our.id] = Math.round(Number(r) * 10) / 10;
+        const hit = fmBestMatch(pool, our);
+        if (!hit) return;
+        const stat = ps[String(hit.id)];
+        let r = fmTopStat(stat, "FotMob rating");
+        if (r == null && hit.performance && hit.performance.rating != null) r = Number(hit.performance.rating);
+        let min = fmTopStat(stat, "Minutes played");
+        const g = fmTopStat(stat, "Goals");
+        const a = fmTopStat(stat, "Assists");
+        if (r == null && min == null) return;
+        if (min == null && r != null) min = fmMinutesFromPerf(hit, full);
+        const rec = {};
+        if (r != null) rec.r = Math.round(r * 10) / 10;
+        if (min != null) rec.min = Math.round(min);
+        if (g != null) rec.g = Math.round(g);
+        if (a != null) rec.a = Math.round(a);
+        stats[our.id] = rec;
       });
     });
-    if (Object.keys(ratings).length) { m.ratings = ratings; applied++; }
+    // 合并而非覆盖：晚到的进球/助攻/分钟与新登场球员逐步补全
+    if (Object.keys(stats).length) {
+      const merged = Object.assign({}, cache[m.no], m.stats, stats);
+      m.stats = merged; cache[m.no] = merged; applied++;
+    }
   }
-  if (applied) applyData(d);
+  if (applied) { saveStatsCache(cache); applyData(d); }
   return applied;
 }
 
@@ -671,7 +784,7 @@ async function refresh(silent) {
     if (!updated && CONFIG.espnDirect) {
       try { await refreshFromESPN(); updated = true; } catch (e) {}
     }
-    try { if (await refreshRatings()) updated = true; } catch (e) {}
+    try { if (await refreshStats()) updated = true; } catch (e) {}
     if (!silent) toast(updated ? "已更新到最新数据" : "更新失败，已显示最近一次数据");
   } finally {
     btn.classList.remove("spinning");
@@ -685,6 +798,8 @@ async function refresh(silent) {
     const cached = JSON.parse(localStorage.getItem("wc26_data"));
     if (cached && new Date(cached.lastUpdated) > new Date(state.data.lastUpdated)) state.data = cached;
   } catch (e) {}
+  // 合并球员数据缓存 + 兼容旧结构（看过的比赛离线也有数据）
+  state.data = normalizeData(state.data);
 
   document.querySelectorAll(".nav-item").forEach(el => { el.onclick = () => switchTab(el.dataset.tab); });
   $("#btn-refresh").onclick = () => refresh(false);
