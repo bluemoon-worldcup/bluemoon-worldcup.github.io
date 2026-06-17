@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-16T17:07:58.783Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-17T03:08:01.469Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-06-16T17:07:58.783Z",
+ "lastUpdated": "2026-06-17T03:08:01.469Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -962,12 +962,19 @@ window.WC_DATA = {
    "away": "SEN",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 3,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-16T19:00:00Z",
    "venue": "大都会人寿体育场",
-   "city": "纽约(东卢瑟福)"
+   "city": "纽约(东卢瑟福)",
+   "stats": {
+    "cherki": {
+     "min": 3,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 18,
@@ -978,12 +985,20 @@ window.WC_DATA = {
    "away": "NOR",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 4,
+   "status": "finished",
    "utc": "2026-06-16T22:00:00Z",
    "venue": "吉列体育场",
-   "city": "波士顿(福克斯堡)"
+   "city": "波士顿(福克斯堡)",
+   "stats": {
+    "haaland": {
+     "r": 9.2,
+     "min": 90,
+     "g": 2,
+     "a": 0
+    }
+   }
   },
   {
    "no": 19,
@@ -994,12 +1009,20 @@ window.WC_DATA = {
    "away": "ALG",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 3,
+   "aScore": 0,
+   "status": "finished",
    "utc": "2026-06-17T01:00:00Z",
    "venue": "箭头体育场",
-   "city": "堪萨斯城"
+   "city": "堪萨斯城",
+   "stats": {
+    "aitnouri": {
+     "r": 6.1,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 20,
