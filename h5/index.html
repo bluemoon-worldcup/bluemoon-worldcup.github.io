@@ -689,14 +689,19 @@ function fmTopStat(ps, label) {
   return v == null ? null : Number(v);
 }
 
+function parseScore(s) {
+  const m = /^\s*(\d+)\s*-\s*(\d+)\s*$/.exec(String(s || ""));
+  return m ? [Number(m[1]), Number(m[2])] : null;
+}
 async function refreshStats() {
   const tracked = trackedTeams();
   const cache = loadStatsCache();
   const now = Date.now();
-  // 已结束、涉及曼城球员；缓存没有的，或刚结束12小时内的（FotMob 数据陆续补全，重抓合并）。最近优先，每次最多8场
+  const KICKED_OFF_MS = 100 * 60 * 1000;   // 开赛约100分钟后即视为可能已结束，开始向 FotMob 问询（不等 ESPN）
+  // 涉及曼城球员、且开赛已久（或已标记结束）的场次；缓存没有或结束12小时内的（数据陆续补全，重抓合并）。最近优先，每次最多8场
   const targets = state.data.matches
-    .filter(m => m.status === "finished" && m.home && m.away &&
-      (tracked.has(m.home) || tracked.has(m.away)) &&
+    .filter(m => m.home && m.away && (tracked.has(m.home) || tracked.has(m.away)) &&
+      (m.status === "finished" || now - Date.parse(m.utc) > KICKED_OFF_MS) &&
       (!cache[m.no] || now - Date.parse(m.utc) < 12 * 3600 * 1000))
     .sort((a, b) => Date.parse(b.utc) - Date.parse(a.utc))
     .slice(0, 8);
@@ -728,6 +733,14 @@ async function refreshStats() {
       if (fm) break;
     }
     if (!fm) continue;
+    // 用 FotMob 自身的状态/比分更新（不依赖 ESPN，国内可达）
+    if (fm.status) {
+      const sc = parseScore(fm.status.scoreStr);
+      if (sc && (m.hScore !== sc[0] || m.aScore !== sc[1])) { m.hScore = sc[0]; m.aScore = sc[1]; applied++; }
+      if (fm.status.finished && m.status !== "finished") { m.status = "finished"; applied++; }
+      else if (!fm.status.finished && fm.status.started && m.status !== "live") { m.status = "live"; applied++; }
+    }
+    if (!(fm.status && fm.status.finished)) continue;   // 没结束就不抓球员数据（评分未定），但状态/比分已更新
     let det;
     try { det = await (await fetch("https://www.fotmob.com/api/data/matchDetails?matchId=" + fm.id)).json(); }
     catch (e) { continue; }
@@ -764,7 +777,7 @@ async function refreshStats() {
       m.stats = merged; cache[m.no] = merged; applied++;
     }
   }
-  if (applied) { saveStatsCache(cache); applyData(d); }
+  if (applied) { d.lastUpdated = new Date().toISOString(); saveStatsCache(cache); applyData(d); }
   return applied;
 }
 
