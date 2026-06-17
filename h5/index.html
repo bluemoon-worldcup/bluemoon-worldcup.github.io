@@ -693,16 +693,31 @@ function parseScore(s) {
   const m = /^\s*(\d+)\s*-\s*(\d+)\s*$/.exec(String(s || ""));
   return m ? [Number(m[1]), Number(m[2])] : null;
 }
+// 各场详情上次抓取时间（运行时，限流用）
+const detailFetchedAt = {};
+// 该场预计结束时刻（开赛 + 常规140 / 淘汰赛170 分钟）
+function expectedEnd(m) { return Date.parse(m.utc) + (m.stage && m.stage !== "group" ? 170 : 140) * 60000; }
+// 该场是否处于"进行中窗口"（已开赛、还没标记结束、未超过预计结束太久）
+function inLiveWindow(m) {
+  const now = Date.now();
+  return m.status !== "finished" && now >= Date.parse(m.utc) - 2 * 60000 && now <= expectedEnd(m);
+}
+// 有没有曼城球员正在进行的比赛（决定轮询快慢）
+function hasLiveTracked() {
+  const tracked = trackedTeams();
+  return state.data.matches.some(m => m.home && m.away &&
+    (tracked.has(m.home) || tracked.has(m.away)) && inLiveWindow(m));
+}
+
 async function refreshStats() {
   const tracked = trackedTeams();
   const cache = loadStatsCache();
   const now = Date.now();
-  const KICKED_OFF_MS = 100 * 60 * 1000;   // 开赛约100分钟后即视为可能已结束，开始向 FotMob 问询（不等 ESPN）
-  // 涉及曼城球员、且开赛已久（或已标记结束）的场次；缓存没有或结束12小时内的（数据陆续补全，重抓合并）。最近优先，每次最多8场
+  // 候选：涉及曼城球员、已开赛或已结束。含①进行中窗口（直播更新）②没缓存过的 ③结束12小时内（补late数据）。最近优先，每次最多8场
   const targets = state.data.matches
     .filter(m => m.home && m.away && (tracked.has(m.home) || tracked.has(m.away)) &&
-      (m.status === "finished" || now - Date.parse(m.utc) > KICKED_OFF_MS) &&
-      (!cache[m.no] || now - Date.parse(m.utc) < 12 * 3600 * 1000))
+      (m.status === "finished" || now >= Date.parse(m.utc) - 2 * 60000) &&
+      (inLiveWindow(m) || !cache[m.no] || now - Date.parse(m.utc) < 12 * 3600 * 1000))
     .sort((a, b) => Date.parse(b.utc) - Date.parse(a.utc))
     .slice(0, 8);
   if (!targets.length) return 0;
@@ -740,7 +755,14 @@ async function refreshStats() {
       if (fm.status.finished && m.status !== "finished") { m.status = "finished"; applied++; }
       else if (!fm.status.finished && fm.status.started && m.status !== "live") { m.status = "live"; applied++; }
     }
-    if (!(fm.status && fm.status.finished)) continue;   // 没结束就不抓球员数据（评分未定），但状态/比分已更新
+    if (!fm.status || !fm.status.started) continue;   // 没开赛就不抓球员数据
+    // 详情抓取限流：直播中每60秒；结束后3小时内每10分钟补一次（晚到的进球/评分修正），更久则只在没抓过时抓一次
+    const finNow = !!fm.status.finished, last = detailFetchedAt[m.no] || 0;
+    const due = finNow
+      ? (!cache[m.no] || (now - expectedEnd(m) < 3 * 3600 * 1000 && now - last > 10 * 60 * 1000))
+      : (now - last > 60 * 1000);
+    if (!due) continue;
+    detailFetchedAt[m.no] = now;
     let det;
     try { det = await (await fetch("https://www.fotmob.com/api/data/matchDetails?matchId=" + fm.id)).json(); }
     catch (e) { continue; }
@@ -820,8 +842,18 @@ async function refresh(silent) {
   renderAll();
   switchTab("matches");
   refresh(true);
-  if (CONFIG.autoRefreshMinutes > 0) setInterval(() => refresh(true), CONFIG.autoRefreshMinutes * 60 * 1000);
-  document.addEventListener("visibilitychange", () => { if (!document.hidden) refresh(true); });
+  // 自适应轮询：有曼城比赛进行中时每60秒，否则按配置（默认5分钟）
+  let pollTimer = null;
+  function scheduleNext() {
+    clearTimeout(pollTimer);
+    const live = hasLiveTracked();
+    const delay = live ? 60 * 1000 : Math.max(1, CONFIG.autoRefreshMinutes || 5) * 60 * 1000;
+    pollTimer = setTimeout(async () => { try { await refresh(true); } catch (e) {} scheduleNext(); }, delay);
+  }
+  scheduleNext();
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) { refresh(true).finally(scheduleNext); }
+  });
 })();
 </script>
 </body>
