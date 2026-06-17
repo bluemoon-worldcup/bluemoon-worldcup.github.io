@@ -182,6 +182,11 @@
     background: var(--card2); color: var(--sub); border: 1px solid var(--line); cursor: pointer;
   }
   .bt-btn.active { background: rgba(108,171,221,.18); color: var(--accent); border-color: var(--accent-dim); font-weight: 700; }
+  .lb-live {
+    display: flex; align-items: center; gap: 7px; margin: 4px 16px 10px;
+    font-size: 12.5px; color: var(--live);
+  }
+  .lb-live .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--live); animation: blink 1.2s infinite; }
   .lb-row {
     display: flex; align-items: center; gap: 12px; background: var(--card);
     border: 1px solid var(--line); border-radius: 12px; margin: 0 12px 8px; padding: 10px 14px;
@@ -584,8 +589,13 @@ function renderBoard() {
       (x.a.min || 0) - (y.a.min || 0) ||
       (y.a.avgR || 0) - (x.a.avgR || 0));
 
+  // 有曼城球员比赛进行中时，顶部显示实时提示
+  const liveNote = hasLiveTracked()
+    ? `<div class="lb-live"><span class="dot"></span>有曼城球员比赛进行中 · 每分钟自动刷新</div>` : "";
+
   if (!rows.length) {
-    $("#board-list").innerHTML = `<div class="empty">还没有曼城球员${metric === "g" ? "进球" : "助攻"}<br>比赛结束后自动更新</div>`;
+    $("#board-list").innerHTML = liveNote +
+      `<div class="empty">还没有曼城球员${metric === "g" ? "进球" : "助攻"}<br>${metric === "g" ? "进球" : "助攻"}后实时更新（比赛中每分钟刷新）</div>`;
     return;
   }
 
@@ -610,7 +620,7 @@ function renderBoard() {
       <div class="lb-val">${val}<span class="unit">${unit}</span></div>
     </div>`;
   });
-  $("#board-list").innerHTML = html;
+  $("#board-list").innerHTML = liveNote + html;
 }
 
 // ================= 渲染总入口 =================
