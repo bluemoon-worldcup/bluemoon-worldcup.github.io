@@ -172,6 +172,35 @@
   .b-line .b-score { margin-left: auto; font-weight: 700; }
   .b-meta { font-size: 10.5px; color: var(--sub); margin-top: 4px; }
 
+  /* ---------- 榜单 ---------- */
+  .board-toggle {
+    display: flex; gap: 8px; padding: 14px 16px 6px; position: sticky; top: 0;
+    background: var(--bg); z-index: 5;
+  }
+  .bt-btn {
+    flex: 1; text-align: center; padding: 9px 0; border-radius: 12px; font-size: 14px;
+    background: var(--card2); color: var(--sub); border: 1px solid var(--line); cursor: pointer;
+  }
+  .bt-btn.active { background: rgba(108,171,221,.18); color: var(--accent); border-color: var(--accent-dim); font-weight: 700; }
+  .lb-row {
+    display: flex; align-items: center; gap: 12px; background: var(--card);
+    border: 1px solid var(--line); border-radius: 12px; margin: 0 12px 8px; padding: 10px 14px;
+  }
+  .lb-rank {
+    flex: 0 0 28px; text-align: center; font-size: 16px; font-weight: 800; color: var(--sub);
+  }
+  .lb-row.top1 .lb-rank { color: #ffd24a; }
+  .lb-row.top2 .lb-rank { color: #cfd6df; }
+  .lb-row.top3 .lb-rank { color: #e08b4a; }
+  .lb-flag { font-size: 22px; flex: 0 0 26px; text-align: center; }
+  .lb-main { flex: 1; min-width: 0; }
+  .lb-name { font-size: 15.5px; font-weight: 600; display: flex; align-items: center; gap: 7px; }
+  .lb-sub { font-size: 11.5px; color: var(--sub); margin-top: 1px; }
+  .lb-val { font-size: 22px; font-weight: 800; color: var(--accent); }
+  .lb-val .unit { font-size: 12px; font-weight: 600; color: var(--sub); margin-left: 2px; }
+  .lb-row.top1 { border-left: 3px solid #ffd24a; }
+  .lb-tag-dep { font-size: 10.5px; color: var(--warn); border: 1px solid rgba(240,160,32,.5); border-radius: 8px; padding: 0 6px; font-weight: 400; }
+
   /* ---------- 底部导航 ---------- */
   nav {
     position: fixed; bottom: 0; left: 0; right: 0; z-index: 30;
@@ -221,6 +250,14 @@
     <div id="player-list"></div>
   </main>
 
+  <main id="view-board" style="display:none">
+    <div class="board-toggle">
+      <div class="bt-btn" data-metric="g">⚽ 进球榜</div>
+      <div class="bt-btn" data-metric="a">🅰 助攻榜</div>
+    </div>
+    <div id="board-list"></div>
+  </main>
+
   <main id="view-bracket" style="display:none">
     <div class="bracket-wrap"><div class="bracket" id="bracket"></div></div>
   </main>
@@ -234,6 +271,7 @@
 <nav>
   <div class="nav-item" data-tab="matches"><span class="ico">📅</span>赛程</div>
   <div class="nav-item" data-tab="players"><span class="ico">👕</span>球员</div>
+  <div class="nav-item" data-tab="board"><span class="ico">🥇</span>榜单</div>
   <div class="nav-item" data-tab="bracket"><span class="ico">🏆</span>对阵图</div>
 </nav>
 
@@ -265,7 +303,8 @@ const CONFIG = {
 const state = {
   data: window.WC_DATA,
   tab: "matches",
-  filter: "tracked"   // tracked | all | 具体球队代码
+  filter: "tracked",  // tracked | all | 具体球队代码
+  boardMetric: "g"    // 榜单：g=进球 / a=助攻
 };
 
 const STAGE_LABEL = { r32: "1/16决赛", r16: "1/8决赛", qf: "1/4决赛", sf: "半决赛", third: "季军赛", final: "决赛" };
@@ -528,6 +567,52 @@ function bLine(code, ph, score, status) {
   </div>`;
 }
 
+// ================= 渲染：榜单（曼城球员世界杯 进球/助攻 排名）=================
+function renderBoard() {
+  const metric = state.boardMetric;          // "g" | "a"
+  const unit = metric === "g" ? "球" : "助";
+  document.querySelectorAll(".bt-btn").forEach(el =>
+    el.classList.toggle("active", el.dataset.metric === metric));
+
+  const agg = aggStats();
+  // 取有该项数据(>0)的曼城球员，按该项降序，平手按出场少者靠前再按场均分
+  const rows = state.data.players
+    .filter(pl => pl.inSquad && agg[pl.id] && agg[pl.id][metric] > 0)
+    .map(pl => ({ pl, a: agg[pl.id] }))
+    .sort((x, y) =>
+      y.a[metric] - x.a[metric] ||
+      (x.a.min || 0) - (y.a.min || 0) ||
+      (y.a.avgR || 0) - (x.a.avgR || 0));
+
+  if (!rows.length) {
+    $("#board-list").innerHTML = `<div class="empty">还没有曼城球员${metric === "g" ? "进球" : "助攻"}<br>比赛结束后自动更新</div>`;
+    return;
+  }
+
+  // 竞赛式名次：同数值同名次
+  let html = "", lastVal = null, lastRank = 0;
+  rows.forEach((row, i) => {
+    const val = row.a[metric];
+    const rank = (val === lastVal) ? lastRank : i + 1;
+    lastVal = val; lastRank = rank;
+    const t = team(row.pl.team);
+    const other = metric === "g" ? (row.a.a ? `${row.a.a} 助攻` : "") : (row.a.g ? `${row.a.g} 进球` : "");
+    const sub = [`出场 ${row.a.apps}`, other].filter(Boolean).join(" · ");
+    html += `<div class="lb-row${rank <= 3 ? " top" + rank : ""}">
+      <div class="lb-rank">${rank}</div>
+      <div class="lb-flag">${t ? t.flag : "▫️"}</div>
+      <div class="lb-main">
+        <div class="lb-name">${esc(row.pl.nameZh)}
+          ${row.pl.club === "departed" ? `<span class="lb-tag-dep">${esc(row.pl.clubNote || "今夏离队")}</span>` : ""}
+        </div>
+        <div class="lb-sub">${esc(t ? t.nameZh : "")}${sub ? " · " + sub : ""}</div>
+      </div>
+      <div class="lb-val">${val}<span class="unit">${unit}</span></div>
+    </div>`;
+  });
+  $("#board-list").innerHTML = html;
+}
+
 // ================= 渲染总入口 =================
 function renderAll() {
   const d = state.data;
@@ -539,13 +624,13 @@ function renderAll() {
     banner.textContent = "⚠️ 当前为占位示例数据，正式数据更新后此提示自动消失";
   } else banner.style.display = "none";
   $("#footer-src").textContent = `数据来源：${d.source || "—"} · 仅供球迷参考`;
-  renderMatches(); renderPlayers(); renderBracket();
+  renderMatches(); renderPlayers(); renderBoard(); renderBracket();
 }
 
 function switchTab(tab) {
   state.tab = tab;
   document.querySelectorAll(".nav-item").forEach(el => el.classList.toggle("active", el.dataset.tab === tab));
-  ["matches", "players", "bracket"].forEach(t => { $("#view-" + t).style.display = t === tab ? "" : "none"; });
+  ["matches", "players", "board", "bracket"].forEach(t => { $("#view-" + t).style.display = t === tab ? "" : "none"; });
   if (tab === "matches") {
     renderMatches();
     const a = $("#today-anchor");
@@ -837,6 +922,9 @@ async function refresh(silent) {
   state.data = normalizeData(state.data);
 
   document.querySelectorAll(".nav-item").forEach(el => { el.onclick = () => switchTab(el.dataset.tab); });
+  document.querySelectorAll(".bt-btn").forEach(el => {
+    el.onclick = () => { state.boardMetric = el.dataset.metric; renderBoard(); };
+  });
   $("#btn-refresh").onclick = () => refresh(false);
 
   renderAll();
