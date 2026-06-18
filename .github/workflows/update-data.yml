@@ -1,0 +1,38 @@
+name: 自动更新世界杯数据
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'   # 每15分钟（GitHub 调度为尽力而为，实际可能略有延迟）
+  workflow_dispatch:           # 也支持手动触发
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 拉取赛程+球员数据并生成
+        run: node tools/update-data.mjs
+
+      - name: 有变化则提交并推送
+        run: |
+          git config user.name "worldcup-bot"
+          git config user.email "worldcup-bot@users.noreply.github.com"
+          git add h5/data.js h5/data.json miniprogram/miniprogram/data/fallback.js miniprogram/cloudfunctions/updateData/lib
+          if git diff --cached --quiet; then
+            echo "数据无变化，跳过提交"
+          else
+            git commit -m "自动更新数据 $(date -u +'%Y-%m-%dT%H:%MZ')"
+            git push
+          fi
