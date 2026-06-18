@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-17T03:08:01.469Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-18T10:35:03.513Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-06-17T03:08:01.469Z",
+ "lastUpdated": "2026-06-18T10:35:03.513Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1017,7 +1017,7 @@ window.WC_DATA = {
    "city": "堪萨斯城",
    "stats": {
     "aitnouri": {
-     "r": 6.1,
+     "r": 6.3,
      "min": 90,
      "g": 0,
      "a": 0
@@ -1033,9 +1033,9 @@ window.WC_DATA = {
    "away": "JOR",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 3,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-17T04:00:00Z",
    "venue": "李维斯体育场",
    "city": "旧金山湾区"
@@ -1049,12 +1049,20 @@ window.WC_DATA = {
    "away": "COD",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-17T17:00:00Z",
    "venue": "NRG体育场",
-   "city": "休斯顿"
+   "city": "休斯顿",
+   "stats": {
+    "bernardo": {
+     "r": 5.7,
+     "min": 45,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 22,
@@ -1065,12 +1073,43 @@ window.WC_DATA = {
    "away": "CRO",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 4,
+   "aScore": 2,
+   "status": "finished",
    "utc": "2026-06-17T20:00:00Z",
    "venue": "AT&T体育场",
-   "city": "阿灵顿(达拉斯)"
+   "city": "阿灵顿(达拉斯)",
+   "stats": {
+    "guehi": {
+     "min": 3,
+     "g": 0,
+     "a": 0
+    },
+    "oreilly": {
+     "r": 6.8,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    },
+    "stones": {
+     "r": 6.5,
+     "min": 87,
+     "g": 0,
+     "a": 0
+    },
+    "gvardiol": {
+     "r": 5.7,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    },
+    "kovacic": {
+     "r": 6.8,
+     "min": 32,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 21,
@@ -1081,12 +1120,20 @@ window.WC_DATA = {
    "away": "PAN",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 0,
+   "status": "finished",
    "utc": "2026-06-17T23:00:00Z",
    "venue": "BMO球场",
-   "city": "多伦多"
+   "city": "多伦多",
+   "stats": {
+    "semenyo": {
+     "r": 6.7,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 24,
@@ -1097,12 +1144,20 @@ window.WC_DATA = {
    "away": "COL",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 3,
+   "status": "finished",
    "utc": "2026-06-18T02:00:00Z",
    "venue": "阿兹特克体育场",
-   "city": "墨西哥城"
+   "city": "墨西哥城",
+   "stats": {
+    "khusanov": {
+     "r": 5.8,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 25,
