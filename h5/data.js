@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-19T20:46:03.745Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-19T21:59:30.462Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-06-19T20:46:03.745Z",
+ "lastUpdated": "2026-06-19T21:59:30.462Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1234,7 +1234,7 @@ window.WC_DATA = {
    "awayP": "",
    "hScore": 2,
    "aScore": 0,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-06-19T19:00:00Z",
    "venue": "流明球场",
    "city": "西雅图"
