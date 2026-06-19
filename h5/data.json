@@ -1,6 +1,6 @@
 {
  "placeholder": false,
- "lastUpdated": "2026-06-19T02:14:01.310Z",
+ "lastUpdated": "2026-06-19T07:29:59.705Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1217,7 +1217,7 @@
    "awayP": "",
    "hScore": 1,
    "aScore": 0,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-06-19T01:00:00Z",
    "venue": "阿克伦体育场",
    "city": "瓜达拉哈拉"

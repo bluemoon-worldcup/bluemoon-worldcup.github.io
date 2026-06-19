@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-19T02:14:01.310Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-19T07:29:59.705Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-06-19T02:14:01.310Z",
+ "lastUpdated": "2026-06-19T07:29:59.705Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1218,7 +1218,7 @@ window.WC_DATA = {
    "awayP": "",
    "hScore": 1,
    "aScore": 0,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-06-19T01:00:00Z",
    "venue": "阿克伦体育场",
    "city": "瓜达拉哈拉"
