@@ -1,6 +1,6 @@
 {
  "placeholder": false,
- "lastUpdated": "2026-06-19T19:09:43.261Z",
+ "lastUpdated": "2026-06-19T20:46:03.745Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1231,7 +1231,7 @@
    "away": "AUS",
    "homeP": "",
    "awayP": "",
-   "hScore": 0,
+   "hScore": 2,
    "aScore": 0,
    "status": "live",
    "utc": "2026-06-19T19:00:00Z",
