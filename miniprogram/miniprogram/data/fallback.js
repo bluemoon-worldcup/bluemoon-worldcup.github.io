@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-20T08:18:43.619Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-20T10:45:47.743Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-06-20T08:18:43.619Z",
+ "lastUpdated": "2026-06-20T10:45:47.743Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1267,7 +1267,7 @@ module.exports = {
    "hScore": 3,
    "aScore": 0,
    "status": "finished",
-   "utc": "2026-06-20T01:00:00Z",
+   "utc": "2026-06-20T00:30:00Z",
    "venue": "林肯金融球场",
    "city": "费城"
   },
@@ -1283,7 +1283,7 @@ module.exports = {
    "hScore": 0,
    "aScore": 1,
    "status": "finished",
-   "utc": "2026-06-20T04:00:00Z",
+   "utc": "2026-06-20T03:00:00Z",
    "venue": "李维斯体育场",
    "city": "旧金山湾区"
   },
@@ -2028,9 +2028,9 @@ module.exports = {
    "stage": "r32",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "MEX",
    "away": null,
-   "homeP": "A组第1",
+   "homeP": "",
    "awayP": "C/E/F/H/I组第3",
    "hScore": null,
    "aScore": null,
@@ -2076,9 +2076,9 @@ module.exports = {
    "stage": "r32",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "USA",
    "away": null,
-   "homeP": "D组第1",
+   "homeP": "",
    "awayP": "B/E/F/I/J组第3",
    "hScore": null,
    "aScore": null,
