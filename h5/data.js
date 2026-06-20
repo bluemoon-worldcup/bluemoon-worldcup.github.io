@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-20T17:46:04.478Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-20T19:13:38.908Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-06-20T17:46:04.478Z",
+ "lastUpdated": "2026-06-20T19:13:38.908Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1296,12 +1296,20 @@ window.WC_DATA = {
    "away": "SWE",
    "homeP": "",
    "awayP": "",
-   "hScore": 2,
-   "aScore": 0,
-   "status": "live",
+   "hScore": 5,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-20T17:00:00Z",
    "venue": "NRG体育场",
-   "city": "休斯顿"
+   "city": "休斯顿",
+   "stats": {
+    "reijnders": {
+     "r": 6.1,
+     "min": 59,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 33,
