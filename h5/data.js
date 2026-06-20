@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-20T20:41:58.322Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-20T21:52:50.021Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-06-20T20:41:58.322Z",
+ "lastUpdated": "2026-06-20T21:52:50.021Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1320,7 +1320,7 @@ window.WC_DATA = {
    "away": "CIV",
    "homeP": "",
    "awayP": "",
-   "hScore": 0,
+   "hScore": 1,
    "aScore": 1,
    "status": "live",
    "utc": "2026-06-20T20:00:00Z",
