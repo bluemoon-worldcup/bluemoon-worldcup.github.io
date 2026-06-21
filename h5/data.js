@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-21T20:25:18.141Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-21T21:51:01.362Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-06-21T20:25:18.141Z",
+ "lastUpdated": "2026-06-21T21:51:01.362Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1394,10 +1394,18 @@ window.WC_DATA = {
    "awayP": "",
    "hScore": 0,
    "aScore": 0,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-06-21T19:00:00Z",
    "venue": "SoFi体育场",
-   "city": "洛杉矶"
+   "city": "洛杉矶",
+   "stats": {
+    "kdb": {
+     "r": 7.5,
+     "min": 87,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 37,
