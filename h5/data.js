@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-21T05:19:42.236Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-21T09:06:51.397Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-06-21T05:19:42.236Z",
+ "lastUpdated": "2026-06-21T09:06:51.397Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1353,8 +1353,8 @@ window.WC_DATA = {
    "homeP": "",
    "awayP": "",
    "hScore": 0,
-   "aScore": 2,
-   "status": "live",
+   "aScore": 4,
+   "status": "finished",
    "utc": "2026-06-21T04:00:00Z",
    "venue": "BBVA体育场",
    "city": "蒙特雷"
@@ -1972,9 +1972,9 @@ window.WC_DATA = {
    "stage": "r32",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "GER",
    "away": null,
-   "homeP": "E组第1",
+   "homeP": "",
    "awayP": "A/B/C/D/F组第3",
    "hScore": null,
    "aScore": null,
