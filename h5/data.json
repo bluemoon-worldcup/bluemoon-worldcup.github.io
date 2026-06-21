@@ -1,6 +1,6 @@
 {
  "placeholder": false,
- "lastUpdated": "2026-06-21T18:57:56.965Z",
+ "lastUpdated": "2026-06-21T20:25:18.141Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1375,7 +1375,7 @@
    "city": "亚特兰大",
    "stats": {
     "rodri": {
-     "r": 8.2,
+     "r": 8.3,
      "min": 90,
      "g": 0,
      "a": 0
@@ -1391,9 +1391,9 @@
    "away": "IRN",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 0,
+   "status": "live",
    "utc": "2026-06-21T19:00:00Z",
    "venue": "SoFi体育场",
    "city": "洛杉矶"
