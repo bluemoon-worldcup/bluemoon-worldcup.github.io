@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-22T00:21:30.581Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-22T05:39:36.694Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-06-22T00:21:30.581Z",
+ "lastUpdated": "2026-06-22T05:39:36.694Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1432,12 +1432,20 @@ window.WC_DATA = {
    "away": "EGY",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 3,
+   "status": "finished",
    "utc": "2026-06-22T01:00:00Z",
    "venue": "BC Place体育馆",
-   "city": "温哥华"
+   "city": "温哥华",
+   "stats": {
+    "marmoush": {
+     "r": 7.4,
+     "min": 76,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 43,
