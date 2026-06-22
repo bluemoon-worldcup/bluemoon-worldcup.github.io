@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-22T19:45:30.626Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-22T21:56:38.781Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-06-22T19:45:30.626Z",
+ "lastUpdated": "2026-06-22T21:56:38.781Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1472,9 +1472,9 @@ window.WC_DATA = {
    "away": "IRQ",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 0,
+   "status": "live",
    "utc": "2026-06-22T21:00:00Z",
    "venue": "林肯金融球场",
    "city": "费城"
