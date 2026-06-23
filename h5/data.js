@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-23T01:28:51.637Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-23T05:42:33.964Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-06-23T01:28:51.637Z",
+ "lastUpdated": "2026-06-23T05:42:33.964Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1497,11 +1497,19 @@ window.WC_DATA = {
    "homeP": "",
    "awayP": "",
    "hScore": 3,
-   "aScore": 1,
-   "status": "live",
+   "aScore": 2,
+   "status": "finished",
    "utc": "2026-06-23T00:00:00Z",
    "venue": "大都会人寿体育场",
-   "city": "纽约(东卢瑟福)"
+   "city": "纽约(东卢瑟福)",
+   "stats": {
+    "haaland": {
+     "r": 9,
+     "min": 90,
+     "g": 2,
+     "a": 0
+    }
+   }
   },
   {
    "no": 44,
@@ -1512,12 +1520,20 @@ window.WC_DATA = {
    "away": "ALG",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 2,
+   "status": "finished",
    "utc": "2026-06-23T03:00:00Z",
    "venue": "李维斯体育场",
-   "city": "旧金山湾区"
+   "city": "旧金山湾区",
+   "stats": {
+    "aitnouri": {
+     "r": 7.9,
+     "min": 85,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 47,
