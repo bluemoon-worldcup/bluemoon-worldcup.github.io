@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-23T22:38:08.662Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-23T23:40:03.675Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-06-23T22:38:08.662Z",
+ "lastUpdated": "2026-06-23T23:40:03.675Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1616,9 +1616,9 @@ window.WC_DATA = {
    "away": "CRO",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 0,
+   "status": "live",
    "utc": "2026-06-23T23:00:00Z",
    "venue": "BMO球场",
    "city": "多伦多"
