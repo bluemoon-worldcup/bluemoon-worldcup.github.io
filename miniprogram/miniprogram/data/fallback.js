@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-23T11:54:20.557Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-23T14:32:37.339Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-06-23T11:54:20.557Z",
+ "lastUpdated": "2026-06-23T14:32:37.339Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2212,9 +2212,9 @@ module.exports = {
    "stage": "r32",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "ARG",
    "away": null,
-   "homeP": "J组第1",
+   "homeP": "",
    "awayP": "H组第2",
    "hScore": null,
    "aScore": null,
