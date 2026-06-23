@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-23T21:12:08.369Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-23T22:38:08.662Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-06-23T21:12:08.369Z",
+ "lastUpdated": "2026-06-23T22:38:08.662Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1582,10 +1582,30 @@ window.WC_DATA = {
    "awayP": "",
    "hScore": 0,
    "aScore": 0,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-06-23T20:00:00Z",
    "venue": "吉列体育场",
-   "city": "波士顿(福克斯堡)"
+   "city": "波士顿(福克斯堡)",
+   "stats": {
+    "guehi": {
+     "r": 8,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    },
+    "oreilly": {
+     "r": 6.8,
+     "min": 24,
+     "g": 0,
+     "a": 0
+    },
+    "semenyo": {
+     "r": 5.7,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 46,
