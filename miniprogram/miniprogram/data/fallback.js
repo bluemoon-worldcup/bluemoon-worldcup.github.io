@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-23T19:18:13.501Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-23T21:12:08.369Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-06-23T19:18:13.501Z",
+ "lastUpdated": "2026-06-23T21:12:08.369Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1552,7 +1552,7 @@ module.exports = {
    "city": "休斯顿",
    "stats": {
     "dias": {
-     "r": 7.8,
+     "r": 7.7,
      "min": 90,
      "g": 0,
      "a": 0
@@ -1580,9 +1580,9 @@ module.exports = {
    "away": "GHA",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 0,
+   "status": "live",
    "utc": "2026-06-23T20:00:00Z",
    "venue": "吉列体育场",
    "city": "波士顿(福克斯堡)"
