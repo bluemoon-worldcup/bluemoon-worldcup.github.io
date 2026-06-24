@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-24T01:30:35.972Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-24T05:48:56.256Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-06-24T01:30:35.972Z",
+ "lastUpdated": "2026-06-24T05:48:56.256Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1624,7 +1624,7 @@ module.exports = {
    "city": "多伦多",
    "stats": {
     "gvardiol": {
-     "r": 6.8,
+     "r": 6.9,
      "min": 45,
      "g": 0,
      "a": 0
@@ -1646,9 +1646,9 @@ module.exports = {
    "away": "COD",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 0,
+   "status": "finished",
    "utc": "2026-06-24T02:00:00Z",
    "venue": "阿克伦体育场",
    "city": "瓜达拉哈拉"
