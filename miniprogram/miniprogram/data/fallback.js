@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-24T20:04:53.342Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-24T21:43:20.895Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-06-24T20:04:53.342Z",
+ "lastUpdated": "2026-06-24T21:43:20.895Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1662,9 +1662,9 @@ module.exports = {
    "away": "CAN",
    "homeP": "",
    "awayP": "",
-   "hScore": 0,
-   "aScore": 0,
-   "status": "live",
+   "hScore": 2,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-24T19:00:00Z",
    "venue": "BC Place体育馆",
    "city": "温哥华"
@@ -1678,9 +1678,9 @@ module.exports = {
    "away": "QAT",
    "homeP": "",
    "awayP": "",
-   "hScore": 2,
+   "hScore": 3,
    "aScore": 1,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-06-24T19:00:00Z",
    "venue": "流明球场",
    "city": "西雅图"
