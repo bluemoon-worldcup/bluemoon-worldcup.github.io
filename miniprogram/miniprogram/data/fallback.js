@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-23T23:40:03.675Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-24T01:30:35.972Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-06-23T23:40:03.675Z",
+ "lastUpdated": "2026-06-24T01:30:35.972Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1594,7 +1594,7 @@ module.exports = {
      "a": 0
     },
     "oreilly": {
-     "r": 6.8,
+     "r": 6.7,
      "min": 24,
      "g": 0,
      "a": 0
@@ -1617,11 +1617,25 @@ module.exports = {
    "homeP": "",
    "awayP": "",
    "hScore": 0,
-   "aScore": 0,
-   "status": "live",
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-23T23:00:00Z",
    "venue": "BMO球场",
-   "city": "多伦多"
+   "city": "多伦多",
+   "stats": {
+    "gvardiol": {
+     "r": 6.8,
+     "min": 45,
+     "g": 0,
+     "a": 0
+    },
+    "kovacic": {
+     "r": 6.6,
+     "min": 72,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 48,
