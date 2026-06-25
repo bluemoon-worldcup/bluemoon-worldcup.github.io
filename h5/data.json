@@ -1,6 +1,6 @@
 {
  "placeholder": false,
- "lastUpdated": "2026-06-25T00:01:28.720Z",
+ "lastUpdated": "2026-06-25T04:22:26.202Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1695,7 +1695,7 @@
    "awayP": "",
    "hScore": 0,
    "aScore": 3,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-06-24T22:00:00Z",
    "venue": "硬石体育场",
    "city": "迈阿密"
@@ -1711,7 +1711,7 @@
    "awayP": "",
    "hScore": 4,
    "aScore": 2,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-06-24T22:00:00Z",
    "venue": "梅赛德斯-奔驰体育场",
    "city": "亚特兰大"
@@ -1725,9 +1725,9 @@
    "away": "MEX",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 3,
+   "status": "finished",
    "utc": "2026-06-25T01:00:00Z",
    "venue": "阿兹特克体育场",
    "city": "墨西哥城"
@@ -1741,9 +1741,9 @@
    "away": "KOR",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 0,
+   "status": "finished",
    "utc": "2026-06-25T01:00:00Z",
    "venue": "BBVA体育场",
    "city": "蒙特雷"
@@ -2041,10 +2041,10 @@
    "stage": "r32",
    "group": "",
    "round": 0,
-   "home": null,
-   "away": null,
-   "homeP": "A组第2",
-   "awayP": "B组第2",
+   "home": "RSA",
+   "away": "CAN",
+   "homeP": "",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
