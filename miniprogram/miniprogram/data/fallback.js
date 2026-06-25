@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-25T21:58:42.926Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-25T23:20:33.775Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-06-25T21:58:42.926Z",
+ "lastUpdated": "2026-06-25T23:20:33.775Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1790,9 +1790,9 @@ module.exports = {
    "away": "SWE",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 0,
+   "status": "live",
    "utc": "2026-06-25T23:00:00Z",
    "venue": "AT&T体育场",
    "city": "阿灵顿(达拉斯)"
@@ -1806,9 +1806,9 @@ module.exports = {
    "away": "NED",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 2,
+   "status": "live",
    "utc": "2026-06-25T23:00:00Z",
    "venue": "箭头体育场",
    "city": "堪萨斯城"

@@ -1,6 +1,6 @@
 {
  "placeholder": false,
- "lastUpdated": "2026-06-25T21:58:42.926Z",
+ "lastUpdated": "2026-06-25T23:20:33.775Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1789,9 +1789,9 @@
    "away": "SWE",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 0,
+   "status": "live",
    "utc": "2026-06-25T23:00:00Z",
    "venue": "AT&T体育场",
    "city": "阿灵顿(达拉斯)"
@@ -1805,9 +1805,9 @@
    "away": "NED",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 2,
+   "status": "live",
    "utc": "2026-06-25T23:00:00Z",
    "venue": "箭头体育场",
    "city": "堪萨斯城"
