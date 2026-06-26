@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-25T23:20:33.775Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-26T01:35:04.245Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-06-25T23:20:33.775Z",
+ "lastUpdated": "2026-06-26T01:35:04.245Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1790,9 +1790,9 @@ module.exports = {
    "away": "SWE",
    "homeP": "",
    "awayP": "",
-   "hScore": 0,
-   "aScore": 0,
-   "status": "live",
+   "hScore": 1,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-25T23:00:00Z",
    "venue": "AT&T体育场",
    "city": "阿灵顿(达拉斯)"
@@ -1806,12 +1806,26 @@ module.exports = {
    "away": "NED",
    "homeP": "",
    "awayP": "",
-   "hScore": 0,
-   "aScore": 2,
-   "status": "live",
+   "hScore": 1,
+   "aScore": 3,
+   "status": "finished",
    "utc": "2026-06-25T23:00:00Z",
    "venue": "箭头体育场",
-   "city": "堪萨斯城"
+   "city": "堪萨斯城",
+   "stats": {
+    "ake": {
+     "r": 7.4,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    },
+    "reijnders": {
+     "r": 8.4,
+     "min": 72,
+     "g": 0,
+     "a": 1
+    }
+   }
   },
   {
    "no": 59,
@@ -2059,9 +2073,9 @@ module.exports = {
    "group": "",
    "round": 0,
    "home": "BRA",
-   "away": null,
+   "away": "JPN",
    "homeP": "",
-   "awayP": "F组第2",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
@@ -2090,9 +2104,9 @@ module.exports = {
    "stage": "r32",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "NED",
    "away": "MAR",
-   "homeP": "F组第1",
+   "homeP": "",
    "awayP": "",
    "hScore": null,
    "aScore": null,
@@ -2187,9 +2201,9 @@ module.exports = {
    "group": "",
    "round": 0,
    "home": "USA",
-   "away": null,
+   "away": "BIH",
    "homeP": "",
-   "awayP": "B/E/F/I/J组第3",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
