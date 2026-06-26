@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-26T01:35:04.245Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-26T05:54:40.580Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-06-26T01:35:04.245Z",
+ "lastUpdated": "2026-06-26T05:54:40.580Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1814,13 +1814,13 @@ module.exports = {
    "city": "堪萨斯城",
    "stats": {
     "ake": {
-     "r": 7.4,
+     "r": 7.6,
      "min": 90,
      "g": 0,
      "a": 0
     },
     "reijnders": {
-     "r": 8.4,
+     "r": 8.5,
      "min": 72,
      "g": 0,
      "a": 1
@@ -1836,9 +1836,9 @@ module.exports = {
    "away": "USA",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 3,
+   "aScore": 2,
+   "status": "finished",
    "utc": "2026-06-26T02:00:00Z",
    "venue": "SoFi体育场",
    "city": "洛杉矶"
@@ -1852,9 +1852,9 @@ module.exports = {
    "away": "AUS",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 0,
+   "status": "finished",
    "utc": "2026-06-26T02:00:00Z",
    "venue": "李维斯体育场",
    "city": "旧金山湾区"
