@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-26T05:54:40.580Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-26T08:52:49.932Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-06-26T05:54:40.580Z",
+ "lastUpdated": "2026-06-26T08:52:49.932Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2120,9 +2120,9 @@ window.WC_DATA = {
    "stage": "r32",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "CIV",
    "away": null,
-   "homeP": "E组第2",
+   "homeP": "",
    "awayP": "I组第2",
    "hScore": null,
    "aScore": null,
@@ -2264,9 +2264,9 @@ window.WC_DATA = {
    "stage": "r32",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "AUS",
    "away": null,
-   "homeP": "D组第2",
+   "homeP": "",
    "awayP": "G组第2",
    "hScore": null,
    "aScore": null,
