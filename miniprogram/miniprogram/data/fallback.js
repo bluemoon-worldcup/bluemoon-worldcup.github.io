@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-27T22:42:09.778Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-27T23:41:34.676Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-06-27T22:42:09.778Z",
+ "lastUpdated": "2026-06-27T23:41:34.676Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2004,10 +2004,24 @@ module.exports = {
    "awayP": "",
    "hScore": 0,
    "aScore": 2,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-06-27T21:00:00Z",
    "venue": "大都会人寿体育场",
-   "city": "纽约(东卢瑟福)"
+   "city": "纽约(东卢瑟福)",
+   "stats": {
+    "guehi": {
+     "r": 7.8,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    },
+    "oreilly": {
+     "r": 7.9,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 68,
@@ -2018,12 +2032,31 @@ module.exports = {
    "away": "GHA",
    "homeP": "",
    "awayP": "",
-   "hScore": 1,
+   "hScore": 2,
    "aScore": 1,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-06-27T21:00:00Z",
    "venue": "林肯金融球场",
-   "city": "费城"
+   "city": "费城",
+   "stats": {
+    "gvardiol": {
+     "min": 2,
+     "g": 0,
+     "a": 0
+    },
+    "kovacic": {
+     "r": 7.5,
+     "min": 78,
+     "g": 0,
+     "a": 1
+    },
+    "semenyo": {
+     "r": 5.8,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 71,
@@ -2034,9 +2067,9 @@ module.exports = {
    "away": "POR",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 0,
+   "status": "live",
    "utc": "2026-06-27T23:30:00Z",
    "venue": "硬石体育场",
    "city": "迈阿密"
@@ -2050,9 +2083,9 @@ module.exports = {
    "away": "UZB",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 0,
+   "status": "live",
    "utc": "2026-06-27T23:30:00Z",
    "venue": "梅赛德斯-奔驰体育场",
    "city": "亚特兰大"
@@ -2191,9 +2224,9 @@ module.exports = {
    "group": "",
    "round": 0,
    "home": "MEX",
-   "away": null,
+   "away": "ECU",
    "homeP": "",
-   "awayP": "C/E/F/H/I组第3",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
