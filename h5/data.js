@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-27T01:34:02.055Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-27T05:38:04.827Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-06-27T01:34:02.055Z",
+ "lastUpdated": "2026-06-27T05:38:04.827Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -1910,7 +1910,7 @@ window.WC_DATA = {
    "awayP": "",
    "hScore": 0,
    "aScore": 0,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-06-27T00:00:00Z",
    "venue": "NRG体育场",
    "city": "休斯顿"
@@ -1926,10 +1926,18 @@ window.WC_DATA = {
    "awayP": "",
    "hScore": 0,
    "aScore": 1,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-06-27T00:00:00Z",
    "venue": "阿克伦体育场",
-   "city": "瓜达拉哈拉"
+   "city": "瓜达拉哈拉",
+   "stats": {
+    "rodri": {
+     "r": 7.2,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 63,
@@ -1940,12 +1948,20 @@ window.WC_DATA = {
    "away": "IRN",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-27T03:00:00Z",
    "venue": "流明球场",
-   "city": "西雅图"
+   "city": "西雅图",
+   "stats": {
+    "marmoush": {
+     "r": 6.5,
+     "min": 45,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 64,
@@ -1956,12 +1972,26 @@ window.WC_DATA = {
    "away": "BEL",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 5,
+   "status": "finished",
    "utc": "2026-06-27T03:00:00Z",
    "venue": "BC Place体育馆",
-   "city": "温哥华"
+   "city": "温哥华",
+   "stats": {
+    "doku": {
+     "r": 7.3,
+     "min": 56,
+     "g": 0,
+     "a": 0
+    },
+    "kdb": {
+     "r": 8.6,
+     "min": 72,
+     "g": 1,
+     "a": 0
+    }
+   }
   },
   {
    "no": 67,
@@ -2097,9 +2127,9 @@ window.WC_DATA = {
    "group": "",
    "round": 0,
    "home": "GER",
-   "away": null,
+   "away": "PAR",
    "homeP": "",
-   "awayP": "A/B/C/D/F组第3",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
@@ -2144,10 +2174,10 @@ window.WC_DATA = {
    "stage": "r32",
    "group": "",
    "round": 0,
-   "home": null,
-   "away": null,
-   "homeP": "I组第1",
-   "awayP": "C/D/F/G/H组第3",
+   "home": "FRA",
+   "away": "SWE",
+   "homeP": "",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
@@ -2273,9 +2303,9 @@ window.WC_DATA = {
    "group": "",
    "round": 0,
    "home": "AUS",
-   "away": null,
+   "away": "EGY",
    "homeP": "",
-   "awayP": "G组第2",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
@@ -2289,9 +2319,9 @@ window.WC_DATA = {
    "group": "",
    "round": 0,
    "home": "ARG",
-   "away": null,
+   "away": "CPV",
    "homeP": "",
-   "awayP": "H组第2",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
