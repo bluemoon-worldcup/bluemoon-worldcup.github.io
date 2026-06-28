@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-28T01:51:56.034Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-28T06:10:29.110Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-06-28T01:51:56.034Z",
+ "lastUpdated": "2026-06-28T06:10:29.110Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2120,12 +2120,20 @@ window.WC_DATA = {
    "away": "AUT",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 3,
+   "aScore": 3,
+   "status": "finished",
    "utc": "2026-06-28T02:00:00Z",
    "venue": "箭头体育场",
-   "city": "堪萨斯城"
+   "city": "堪萨斯城",
+   "stats": {
+    "aitnouri": {
+     "r": 6.6,
+     "min": 19,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 70,
@@ -2136,9 +2144,9 @@ window.WC_DATA = {
    "away": "ARG",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 3,
+   "status": "finished",
    "utc": "2026-06-28T02:00:00Z",
    "venue": "AT&T体育场",
    "city": "阿灵顿(达拉斯)"
@@ -2309,9 +2317,9 @@ window.WC_DATA = {
    "group": "",
    "round": 0,
    "home": "ESP",
-   "away": null,
+   "away": "AUT",
    "homeP": "",
-   "awayP": "J组第2",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
@@ -2341,9 +2349,9 @@ window.WC_DATA = {
    "group": "",
    "round": 0,
    "home": "SUI",
-   "away": null,
+   "away": "ALG",
    "homeP": "",
-   "awayP": "E/F/G/I/J组第3",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
