@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-28T18:17:07.621Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-28T19:51:57.880Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-06-28T18:17:07.621Z",
+ "lastUpdated": "2026-06-28T19:51:57.880Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2160,9 +2160,9 @@ module.exports = {
    "away": "CAN",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 0,
+   "status": "live",
    "utc": "2026-06-28T19:00:00Z",
    "venue": "SoFi体育场",
    "city": "洛杉矶"
