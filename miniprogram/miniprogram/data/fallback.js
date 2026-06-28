@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-28T06:10:29.110Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-28T09:31:24.476Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-06-28T06:10:29.110Z",
+ "lastUpdated": "2026-06-28T09:31:24.476Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2128,7 +2128,7 @@ module.exports = {
    "city": "堪萨斯城",
    "stats": {
     "aitnouri": {
-     "r": 6.6,
+     "r": 6.5,
      "min": 19,
      "g": 0,
      "a": 0
