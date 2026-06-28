@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-27T23:41:34.676Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-28T01:51:56.034Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-06-27T23:41:34.676Z",
+ "lastUpdated": "2026-06-28T01:51:56.034Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2016,7 +2016,7 @@ module.exports = {
      "a": 0
     },
     "oreilly": {
-     "r": 7.9,
+     "r": 7.8,
      "min": 90,
      "g": 0,
      "a": 0
@@ -2069,10 +2069,23 @@ module.exports = {
    "awayP": "",
    "hScore": 0,
    "aScore": 0,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-06-27T23:30:00Z",
    "venue": "硬石体育场",
-   "city": "迈阿密"
+   "city": "迈阿密",
+   "stats": {
+    "dias": {
+     "r": 7.4,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    },
+    "nunes": {
+     "min": 1,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 72,
@@ -2083,12 +2096,20 @@ module.exports = {
    "away": "UZB",
    "homeP": "",
    "awayP": "",
-   "hScore": 0,
-   "aScore": 0,
-   "status": "live",
+   "hScore": 3,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-06-27T23:30:00Z",
    "venue": "梅赛德斯-奔驰体育场",
-   "city": "亚特兰大"
+   "city": "亚特兰大",
+   "stats": {
+    "khusanov": {
+     "r": 6.3,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 69,
@@ -2239,10 +2260,10 @@ module.exports = {
    "stage": "r32",
    "group": "",
    "round": 0,
-   "home": null,
-   "away": null,
-   "homeP": "L组第1",
-   "awayP": "E/H/I/J/K组第3",
+   "home": "ENG",
+   "away": "COD",
+   "homeP": "",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
@@ -2256,9 +2277,9 @@ module.exports = {
    "group": "",
    "round": 0,
    "home": "BEL",
-   "away": null,
+   "away": "SEN",
    "homeP": "",
-   "awayP": "A/E/H/I/J组第3",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
@@ -2303,10 +2324,10 @@ module.exports = {
    "stage": "r32",
    "group": "",
    "round": 0,
-   "home": null,
-   "away": null,
-   "homeP": "K组第2",
-   "awayP": "L组第2",
+   "home": "POR",
+   "away": "CRO",
+   "homeP": "",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
@@ -2367,10 +2388,10 @@ module.exports = {
    "stage": "r32",
    "group": "",
    "round": 0,
-   "home": null,
-   "away": null,
-   "homeP": "K组第1",
-   "awayP": "D/E/I/J/L组第3",
+   "home": "COL",
+   "away": "GHA",
+   "homeP": "",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
