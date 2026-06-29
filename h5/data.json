@@ -1,6 +1,6 @@
 {
  "placeholder": false,
- "lastUpdated": "2026-06-29T20:50:35.379Z",
+ "lastUpdated": "2026-06-29T22:05:17.217Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2191,8 +2191,8 @@
    "away": "PAR",
    "homeP": "",
    "awayP": "",
-   "hScore": 0,
-   "aScore": 0,
+   "hScore": 1,
+   "aScore": 1,
    "status": "live",
    "utc": "2026-06-29T20:30:00Z",
    "venue": "吉列体育场",
