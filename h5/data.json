@@ -1,6 +1,6 @@
 {
  "placeholder": false,
- "lastUpdated": "2026-06-29T16:55:03.447Z",
+ "lastUpdated": "2026-06-29T18:59:52.487Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2175,9 +2175,9 @@
    "away": "JPN",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 2,
+   "aScore": 1,
+   "status": "live",
    "utc": "2026-06-29T17:00:00Z",
    "venue": "NRG体育场",
    "city": "休斯顿"

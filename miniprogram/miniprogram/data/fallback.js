@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-29T16:55:03.447Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-29T18:59:52.487Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-06-29T16:55:03.447Z",
+ "lastUpdated": "2026-06-29T18:59:52.487Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2176,9 +2176,9 @@ module.exports = {
    "away": "JPN",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 2,
+   "aScore": 1,
+   "status": "live",
    "utc": "2026-06-29T17:00:00Z",
    "venue": "NRG体育场",
    "city": "休斯顿"
