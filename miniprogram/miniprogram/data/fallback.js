@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-30T18:13:46.638Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-30T20:19:38.925Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-06-30T18:13:46.638Z",
+ "lastUpdated": "2026-06-30T20:19:38.925Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2232,12 +2232,20 @@ module.exports = {
    "away": "NOR",
    "homeP": "",
    "awayP": "",
-   "hScore": 0,
-   "aScore": 1,
-   "status": "live",
+   "hScore": 1,
+   "aScore": 2,
+   "status": "finished",
    "utc": "2026-06-30T17:00:00Z",
    "venue": "AT&T体育场",
-   "city": "阿灵顿(达拉斯)"
+   "city": "阿灵顿(达拉斯)",
+   "stats": {
+    "haaland": {
+     "r": 7.8,
+     "min": 90,
+     "g": 1,
+     "a": 0
+    }
+   }
   },
   {
    "no": 77,
@@ -2453,9 +2461,9 @@ module.exports = {
    "group": "",
    "round": 0,
    "home": "BRA",
-   "away": null,
+   "away": "NOR",
    "homeP": "",
-   "awayP": "待定",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
