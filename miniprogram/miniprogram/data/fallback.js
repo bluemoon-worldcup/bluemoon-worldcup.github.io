@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-30T21:53:16.019Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-30T23:04:33.160Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-06-30T21:53:16.019Z",
+ "lastUpdated": "2026-06-30T23:04:33.160Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2256,12 +2256,19 @@ module.exports = {
    "away": "SWE",
    "homeP": "",
    "awayP": "",
-   "hScore": 1,
+   "hScore": 3,
    "aScore": 0,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-06-30T21:00:00Z",
    "venue": "大都会人寿体育场",
-   "city": "纽约(东卢瑟福)"
+   "city": "纽约(东卢瑟福)",
+   "stats": {
+    "cherki": {
+     "min": 5,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 79,
@@ -2445,9 +2452,9 @@ module.exports = {
    "group": "",
    "round": 0,
    "home": "PAR",
-   "away": null,
+   "away": "FRA",
    "homeP": "",
-   "awayP": "待定",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
