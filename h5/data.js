@@ -1,7 +1,7 @@
-// 自动生成于 2026-06-29T23:15:13.683Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-06-30T01:26:07.122Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-06-29T23:15:13.683Z",
+ "lastUpdated": "2026-06-30T01:26:07.122Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2194,7 +2194,7 @@ window.WC_DATA = {
    "awayP": "",
    "hScore": 1,
    "aScore": 1,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-06-29T20:30:00Z",
    "venue": "吉列体育场",
    "city": "波士顿(福克斯堡)"
@@ -2208,9 +2208,9 @@ window.WC_DATA = {
    "away": "MAR",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 0,
+   "status": "live",
    "utc": "2026-06-30T01:00:00Z",
    "venue": "BBVA体育场",
    "city": "蒙特雷"
@@ -2428,9 +2428,9 @@ window.WC_DATA = {
    "stage": "r16",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "PAR",
    "away": null,
-   "homeP": "待定",
+   "homeP": "",
    "awayP": "待定",
    "hScore": null,
    "aScore": null,
