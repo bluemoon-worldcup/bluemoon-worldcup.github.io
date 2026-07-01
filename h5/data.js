@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-01T18:30:52.534Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-01T20:28:24.200Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-07-01T18:30:52.534Z",
+ "lastUpdated": "2026-07-01T20:28:24.200Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2309,7 +2309,7 @@ window.WC_DATA = {
      "a": 0
     },
     "oreilly": {
-     "r": 7.1,
+     "r": 7,
      "min": 90,
      "g": 0,
      "a": 0
@@ -2330,9 +2330,9 @@ window.WC_DATA = {
    "away": "SEN",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 1,
+   "status": "live",
    "utc": "2026-07-01T20:00:00Z",
    "venue": "流明球场",
    "city": "西雅图"
