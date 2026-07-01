@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-01T16:40:52.552Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-01T18:30:52.534Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-07-01T16:40:52.552Z",
+ "lastUpdated": "2026-07-01T18:30:52.534Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2295,12 +2295,31 @@ window.WC_DATA = {
    "away": "COD",
    "homeP": "",
    "awayP": "",
-   "hScore": 0,
+   "hScore": 2,
    "aScore": 1,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-07-01T16:00:00Z",
    "venue": "梅赛德斯-奔驰体育场",
-   "city": "亚特兰大"
+   "city": "亚特兰大",
+   "stats": {
+    "guehi": {
+     "r": 7.3,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    },
+    "oreilly": {
+     "r": 7.1,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    },
+    "stones": {
+     "min": 1,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 82,
@@ -2484,9 +2503,9 @@ window.WC_DATA = {
    "group": "",
    "round": 0,
    "home": "MEX",
-   "away": null,
+   "away": "ENG",
    "homeP": "",
-   "awayP": "待定",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
