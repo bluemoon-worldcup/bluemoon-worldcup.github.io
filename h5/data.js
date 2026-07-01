@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-01T08:55:25.541Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-01T11:54:44.527Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-07-01T08:55:25.541Z",
+ "lastUpdated": "2026-07-01T11:54:44.527Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2282,7 +2282,7 @@ window.WC_DATA = {
    "hScore": 2,
    "aScore": 0,
    "status": "finished",
-   "utc": "2026-07-01T01:00:00Z",
+   "utc": "2026-07-01T02:00:00Z",
    "venue": "阿兹特克体育场",
    "city": "墨西哥城"
   },
