@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-01T00:19:55.924Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-01T05:01:04.472Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-07-01T00:19:55.924Z",
+ "lastUpdated": "2026-07-01T05:01:04.472Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2279,9 +2279,9 @@ window.WC_DATA = {
    "away": "ECU",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 2,
+   "aScore": 0,
+   "status": "finished",
    "utc": "2026-07-01T01:00:00Z",
    "venue": "阿兹特克体育场",
    "city": "墨西哥城"
@@ -2483,9 +2483,9 @@ window.WC_DATA = {
    "stage": "r16",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "MEX",
    "away": null,
-   "homeP": "待定",
+   "homeP": "",
    "awayP": "待定",
    "hScore": null,
    "aScore": null,
