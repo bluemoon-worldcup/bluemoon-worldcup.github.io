@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-01T23:41:09.614Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-02T05:41:44.295Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-07-01T23:41:09.614Z",
+ "lastUpdated": "2026-07-02T05:41:44.295Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2344,7 +2344,7 @@ module.exports = {
      "a": 0
     },
     "kdb": {
-     "r": 6.6,
+     "r": 7,
      "min": 56,
      "g": 0,
      "a": 0
@@ -2360,9 +2360,9 @@ module.exports = {
    "away": "BIH",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 2,
+   "aScore": 0,
+   "status": "finished",
    "utc": "2026-07-02T00:00:00Z",
    "venue": "李维斯体育场",
    "city": "旧金山湾区"
@@ -2548,9 +2548,9 @@ module.exports = {
    "stage": "r16",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "USA",
    "away": "BEL",
-   "homeP": "待定",
+   "homeP": "",
    "awayP": "",
    "hScore": null,
    "aScore": null,
