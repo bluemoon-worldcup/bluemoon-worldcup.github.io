@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-03T03:17:32.418Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-03T06:45:57.248Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-07-03T03:17:32.418Z",
+ "lastUpdated": "2026-07-03T06:45:57.248Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2441,12 +2441,20 @@ window.WC_DATA = {
    "away": "ALG",
    "homeP": "",
    "awayP": "",
-   "hScore": 1,
+   "hScore": 2,
    "aScore": 0,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-07-03T03:00:00Z",
    "venue": "BC Place体育馆",
-   "city": "温哥华"
+   "city": "温哥华",
+   "stats": {
+    "aitnouri": {
+     "r": 7.5,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 88,
