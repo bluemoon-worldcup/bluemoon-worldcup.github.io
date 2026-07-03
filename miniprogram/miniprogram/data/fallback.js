@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-03T22:40:57.508Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-03T23:42:39.121Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-07-03T22:40:57.508Z",
+ "lastUpdated": "2026-07-03T23:42:39.121Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2490,7 +2490,7 @@ module.exports = {
    "homeP": "",
    "awayP": "",
    "hScore": 1,
-   "aScore": 0,
+   "aScore": 1,
    "status": "live",
    "utc": "2026-07-03T22:00:00Z",
    "venue": "硬石体育场",
