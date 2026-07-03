@@ -1,6 +1,6 @@
 {
  "placeholder": false,
- "lastUpdated": "2026-07-03T19:06:35.293Z",
+ "lastUpdated": "2026-07-03T20:22:19.608Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2464,7 +2464,7 @@
    "away": "EGY",
    "homeP": "",
    "awayP": "",
-   "hScore": 0,
+   "hScore": 1,
    "aScore": 1,
    "status": "live",
    "utc": "2026-07-03T18:00:00Z",
