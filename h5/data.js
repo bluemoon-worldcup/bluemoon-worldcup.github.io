@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-03T20:22:19.608Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-03T21:39:06.402Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-07-03T20:22:19.608Z",
+ "lastUpdated": "2026-07-03T21:39:06.402Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2467,10 +2467,18 @@ window.WC_DATA = {
    "awayP": "",
    "hScore": 1,
    "aScore": 1,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-07-03T18:00:00Z",
    "venue": "AT&T体育场",
-   "city": "阿灵顿(达拉斯)"
+   "city": "阿灵顿(达拉斯)",
+   "stats": {
+    "marmoush": {
+     "r": 6.5,
+     "min": 105,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 86,
@@ -2606,9 +2614,9 @@ window.WC_DATA = {
    "group": "",
    "round": 0,
    "home": null,
-   "away": null,
+   "away": "EGY",
    "homeP": "待定",
-   "awayP": "待定",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
