@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-02T23:58:03.894Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-03T03:17:32.418Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-07-02T23:58:03.894Z",
+ "lastUpdated": "2026-07-03T03:17:32.418Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2400,12 +2400,37 @@ module.exports = {
    "away": "CRO",
    "homeP": "",
    "awayP": "",
-   "hScore": 0,
-   "aScore": 0,
-   "status": "live",
+   "hScore": 2,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-07-02T23:00:00Z",
    "venue": "BMO球场",
-   "city": "多伦多"
+   "city": "多伦多",
+   "stats": {
+    "dias": {
+     "r": 7.8,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    },
+    "bernardo": {
+     "r": 6.1,
+     "min": 28,
+     "g": 0,
+     "a": 0
+    },
+    "gvardiol": {
+     "min": 1,
+     "g": 0,
+     "a": 0
+    },
+    "kovacic": {
+     "r": 6.9,
+     "min": 89,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 85,
@@ -2416,9 +2441,9 @@ module.exports = {
    "away": "ALG",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 0,
+   "status": "live",
    "utc": "2026-07-03T03:00:00Z",
    "venue": "BC Place体育馆",
    "city": "温哥华"
@@ -2540,9 +2565,9 @@ module.exports = {
    "stage": "r16",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "POR",
    "away": "ESP",
-   "homeP": "待定",
+   "homeP": "",
    "awayP": "",
    "hScore": null,
    "aScore": null,
