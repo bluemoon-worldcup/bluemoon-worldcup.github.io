@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-04T22:27:48.074Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-04T23:31:23.830Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-07-04T22:27:48.074Z",
+ "lastUpdated": "2026-07-04T23:31:23.830Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2546,11 +2546,18 @@ window.WC_DATA = {
    "homeP": "",
    "awayP": "",
    "hScore": 0,
-   "aScore": 0,
-   "status": "live",
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-07-04T21:00:00Z",
    "venue": "林肯金融球场",
-   "city": "费城"
+   "city": "费城",
+   "stats": {
+    "cherki": {
+     "min": 6,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 91,
@@ -2653,9 +2660,9 @@ window.WC_DATA = {
    "stage": "qf",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "FRA",
    "away": "MAR",
-   "homeP": "待定",
+   "homeP": "",
    "awayP": "",
    "hScore": null,
    "aScore": null,
