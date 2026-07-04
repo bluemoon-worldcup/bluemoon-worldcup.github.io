@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-04T01:16:26.148Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-04T05:03:20.578Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-07-04T01:16:26.148Z",
+ "lastUpdated": "2026-07-04T05:03:20.578Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2505,12 +2505,20 @@ window.WC_DATA = {
    "away": "GHA",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 0,
+   "status": "finished",
    "utc": "2026-07-04T01:30:00Z",
    "venue": "箭头体育场",
-   "city": "堪萨斯城"
+   "city": "堪萨斯城",
+   "stats": {
+    "semenyo": {
+     "r": 6.6,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 90,
@@ -2630,9 +2638,9 @@ window.WC_DATA = {
    "group": "",
    "round": 0,
    "home": "SUI",
-   "away": null,
+   "away": "COL",
    "homeP": "",
-   "awayP": "待定",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
