@@ -1,6 +1,6 @@
 {
  "placeholder": false,
- "lastUpdated": "2026-07-05T18:47:02.825Z",
+ "lastUpdated": "2026-07-05T20:08:11.299Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2567,9 +2567,9 @@
    "away": "NOR",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 0,
+   "status": "live",
    "utc": "2026-07-05T20:00:00Z",
    "venue": "大都会人寿体育场",
    "city": "纽约(东卢瑟福)"
