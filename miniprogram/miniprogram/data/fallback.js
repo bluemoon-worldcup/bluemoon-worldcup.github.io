@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-05T21:18:19.830Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-05T22:28:49.293Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-07-05T21:18:19.830Z",
+ "lastUpdated": "2026-07-05T22:28:49.293Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2568,12 +2568,20 @@ module.exports = {
    "away": "NOR",
    "homeP": "",
    "awayP": "",
-   "hScore": 0,
-   "aScore": 0,
-   "status": "live",
+   "hScore": 1,
+   "aScore": 2,
+   "status": "finished",
    "utc": "2026-07-05T20:00:00Z",
    "venue": "大都会人寿体育场",
-   "city": "纽约(东卢瑟福)"
+   "city": "纽约(东卢瑟福)",
+   "stats": {
+    "haaland": {
+     "r": 8.8,
+     "min": 90,
+     "g": 2,
+     "a": 0
+    }
+   }
   },
   {
    "no": 92,
@@ -2692,9 +2700,9 @@ module.exports = {
    "stage": "qf",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "NOR",
    "away": null,
-   "homeP": "待定",
+   "homeP": "",
    "awayP": "待定",
    "hScore": null,
    "aScore": null,
