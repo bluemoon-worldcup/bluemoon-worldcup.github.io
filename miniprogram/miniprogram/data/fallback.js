@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-06T01:22:23.640Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-06T05:48:47.061Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-07-06T01:22:23.640Z",
+ "lastUpdated": "2026-07-06T05:48:47.061Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2592,12 +2592,32 @@ module.exports = {
    "away": "ENG",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 2,
+   "aScore": 3,
+   "status": "finished",
    "utc": "2026-07-06T00:00:00Z",
    "venue": "阿兹特克体育场",
-   "city": "墨西哥城"
+   "city": "墨西哥城",
+   "stats": {
+    "guehi": {
+     "r": 7.2,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    },
+    "oreilly": {
+     "r": 6.6,
+     "min": 74,
+     "g": 0,
+     "a": 0
+    },
+    "stones": {
+     "r": 6.4,
+     "min": 33,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 93,
@@ -2701,9 +2721,9 @@ module.exports = {
    "group": "",
    "round": 0,
    "home": "NOR",
-   "away": null,
+   "away": "ENG",
    "homeP": "",
-   "awayP": "待定",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
