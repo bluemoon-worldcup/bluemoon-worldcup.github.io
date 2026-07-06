@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-06T20:59:44.098Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-06T22:17:24.900Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-07-06T20:59:44.098Z",
+ "lastUpdated": "2026-07-06T22:17:24.900Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2630,10 +2630,29 @@ module.exports = {
    "awayP": "",
    "hScore": 0,
    "aScore": 1,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-07-06T19:00:00Z",
    "venue": "AT&T体育场",
-   "city": "阿灵顿(达拉斯)"
+   "city": "阿灵顿(达拉斯)",
+   "stats": {
+    "dias": {
+     "r": 6.4,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    },
+    "bernardo": {
+     "min": 7,
+     "g": 0,
+     "a": 0
+    },
+    "rodri": {
+     "r": 8.1,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 94,
@@ -2704,9 +2723,9 @@ module.exports = {
    "stage": "qf",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "ESP",
    "away": null,
-   "homeP": "待定",
+   "homeP": "",
    "awayP": "待定",
    "hScore": null,
    "aScore": null,
