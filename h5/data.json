@@ -1,6 +1,6 @@
 {
  "placeholder": false,
- "lastUpdated": "2026-07-07T22:54:03.359Z",
+ "lastUpdated": "2026-07-07T23:51:45.268Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2712,7 +2712,7 @@
    "awayP": "",
    "hScore": 0,
    "aScore": 0,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-07-07T20:00:00Z",
    "venue": "BC Place体育馆",
    "city": "温哥华"

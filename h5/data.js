@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-07T22:54:03.359Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-07T23:51:45.268Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-07-07T22:54:03.359Z",
+ "lastUpdated": "2026-07-07T23:51:45.268Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2713,7 +2713,7 @@ window.WC_DATA = {
    "awayP": "",
    "hScore": 0,
    "aScore": 0,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-07-07T20:00:00Z",
    "venue": "BC Place体育馆",
    "city": "温哥华"
