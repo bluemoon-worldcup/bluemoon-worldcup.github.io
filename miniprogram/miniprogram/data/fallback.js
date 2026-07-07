@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-07T13:51:14.073Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-07T16:21:42.383Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-07-07T13:51:14.073Z",
+ "lastUpdated": "2026-07-07T16:21:42.383Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2687,9 +2687,9 @@ module.exports = {
    "away": "EGY",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 1,
+   "status": "live",
    "utc": "2026-07-07T16:00:00Z",
    "venue": "梅赛德斯-奔驰体育场",
    "city": "亚特兰大"
