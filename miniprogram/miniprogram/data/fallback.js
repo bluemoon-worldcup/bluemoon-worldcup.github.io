@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-06T23:35:23.956Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-07T01:22:41.850Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-07-06T23:35:23.956Z",
+ "lastUpdated": "2026-07-07T01:22:41.850Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2647,7 +2647,7 @@ module.exports = {
      "a": 0
     },
     "rodri": {
-     "r": 8.1,
+     "r": 8,
      "min": 90,
      "g": 0,
      "a": 0
@@ -2663,9 +2663,9 @@ module.exports = {
    "away": "BEL",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 1,
+   "aScore": 3,
+   "status": "live",
    "utc": "2026-07-07T00:00:00Z",
    "venue": "流明球场",
    "city": "西雅图"
