@@ -1,6 +1,6 @@
 {
  "placeholder": false,
- "lastUpdated": "2026-07-09T18:59:37.762Z",
+ "lastUpdated": "2026-07-09T20:49:54.857Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2726,9 +2726,9 @@
    "away": "MAR",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 0,
+   "status": "live",
    "utc": "2026-07-09T20:00:00Z",
    "venue": "吉列体育场",
    "city": "波士顿(福克斯堡)"

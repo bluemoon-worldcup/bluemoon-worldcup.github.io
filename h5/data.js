@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-09T18:59:37.762Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-09T20:49:54.857Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-07-09T18:59:37.762Z",
+ "lastUpdated": "2026-07-09T20:49:54.857Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2727,9 +2727,9 @@ window.WC_DATA = {
    "away": "MAR",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 0,
+   "status": "live",
    "utc": "2026-07-09T20:00:00Z",
    "venue": "吉列体育场",
    "city": "波士顿(福克斯堡)"
