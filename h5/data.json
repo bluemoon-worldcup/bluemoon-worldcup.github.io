@@ -1,6 +1,6 @@
 {
  "placeholder": false,
- "lastUpdated": "2026-07-09T22:15:46.225Z",
+ "lastUpdated": "2026-07-09T23:43:34.116Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2786,9 +2786,9 @@
    "stage": "sf",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "FRA",
    "away": null,
-   "homeP": "待定",
+   "homeP": "",
    "awayP": "待定",
    "hScore": null,
    "aScore": null,
