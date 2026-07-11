@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-11T22:29:41.055Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-11T23:29:07.647Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-07-11T22:29:41.055Z",
+ "lastUpdated": "2026-07-11T23:29:07.647Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2780,7 +2780,7 @@ window.WC_DATA = {
    "homeP": "",
    "awayP": "",
    "hScore": 1,
-   "aScore": 1,
+   "aScore": 2,
    "status": "live",
    "utc": "2026-07-11T21:00:00Z",
    "venue": "硬石体育场",
