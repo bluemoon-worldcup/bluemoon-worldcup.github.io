@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-11T14:32:24.324Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-11T15:36:20.139Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-07-11T14:32:24.324Z",
+ "lastUpdated": "2026-07-11T15:36:20.139Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
