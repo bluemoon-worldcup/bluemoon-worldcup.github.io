@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-12T01:05:18.860Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-12T04:37:21.914Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-07-12T01:05:18.860Z",
+ "lastUpdated": "2026-07-12T04:37:21.914Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2799,13 +2799,13 @@ module.exports = {
      "a": 0
     },
     "oreilly": {
-     "r": 7.6,
+     "r": 7.3,
      "min": 86,
      "g": 0,
      "a": 0
     },
     "stones": {
-     "r": 7.3,
+     "r": 7.2,
      "min": 120,
      "g": 0,
      "a": 0
@@ -2821,9 +2821,9 @@ module.exports = {
    "away": "SUI",
    "homeP": "",
    "awayP": "",
-   "hScore": 0,
-   "aScore": 0,
-   "status": "live",
+   "hScore": 3,
+   "aScore": 1,
+   "status": "finished",
    "utc": "2026-07-12T01:00:00Z",
    "venue": "箭头体育场",
    "city": "堪萨斯城"
@@ -2850,9 +2850,9 @@ module.exports = {
    "group": "",
    "round": 0,
    "home": "ENG",
-   "away": null,
+   "away": "ARG",
    "homeP": "",
-   "awayP": "待定",
+   "awayP": "",
    "hScore": null,
    "aScore": null,
    "status": "scheduled",
