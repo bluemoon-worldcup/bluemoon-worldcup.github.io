@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-11T23:29:07.647Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-12T01:05:18.860Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-07-11T23:29:07.647Z",
+ "lastUpdated": "2026-07-12T01:05:18.860Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2781,10 +2781,36 @@ module.exports = {
    "awayP": "",
    "hScore": 1,
    "aScore": 2,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-07-11T21:00:00Z",
    "venue": "硬石体育场",
-   "city": "迈阿密"
+   "city": "迈阿密",
+   "stats": {
+    "haaland": {
+     "r": 6.4,
+     "min": 105,
+     "g": 0,
+     "a": 0
+    },
+    "guehi": {
+     "r": 6.8,
+     "min": 120,
+     "g": 0,
+     "a": 0
+    },
+    "oreilly": {
+     "r": 7.6,
+     "min": 86,
+     "g": 0,
+     "a": 0
+    },
+    "stones": {
+     "r": 7.3,
+     "min": 120,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 100,
@@ -2795,9 +2821,9 @@ module.exports = {
    "away": "SUI",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 0,
+   "status": "live",
    "utc": "2026-07-12T01:00:00Z",
    "venue": "箭头体育场",
    "city": "堪萨斯城"
@@ -2823,9 +2849,9 @@ module.exports = {
    "stage": "sf",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "ENG",
    "away": null,
-   "homeP": "待定",
+   "homeP": "",
    "awayP": "待定",
    "hScore": null,
    "aScore": null,
