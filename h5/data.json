@@ -1,6 +1,6 @@
 {
  "placeholder": false,
- "lastUpdated": "2026-07-14T19:16:40.297Z",
+ "lastUpdated": "2026-07-14T20:36:07.440Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2837,7 +2837,7 @@
    "homeP": "",
    "awayP": "",
    "hScore": 0,
-   "aScore": 0,
+   "aScore": 2,
    "status": "live",
    "utc": "2026-07-14T19:00:00Z",
    "venue": "AT&T体育场",
