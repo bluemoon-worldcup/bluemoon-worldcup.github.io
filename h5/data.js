@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-14T20:36:07.440Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-14T21:35:51.138Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-07-14T20:36:07.440Z",
+ "lastUpdated": "2026-07-14T21:35:51.138Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2839,10 +2839,24 @@ window.WC_DATA = {
    "awayP": "",
    "hScore": 0,
    "aScore": 2,
-   "status": "live",
+   "status": "finished",
    "utc": "2026-07-14T19:00:00Z",
    "venue": "AT&T体育场",
-   "city": "阿灵顿(达拉斯)"
+   "city": "阿灵顿(达拉斯)",
+   "stats": {
+    "cherki": {
+     "r": 6.8,
+     "min": 18,
+     "g": 0,
+     "a": 0
+    },
+    "rodri": {
+     "r": 7.6,
+     "min": 90,
+     "g": 0,
+     "a": 0
+    }
+   }
   },
   {
    "no": 102,
@@ -2865,9 +2879,9 @@ window.WC_DATA = {
    "stage": "third",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "FRA",
    "away": null,
-   "homeP": "待定",
+   "homeP": "",
    "awayP": "待定",
    "hScore": null,
    "aScore": null,
@@ -2881,9 +2895,9 @@ window.WC_DATA = {
    "stage": "final",
    "group": "",
    "round": 0,
-   "home": null,
+   "home": "ESP",
    "away": null,
-   "homeP": "待定",
+   "homeP": "",
    "awayP": "待定",
    "hScore": null,
    "aScore": null,
