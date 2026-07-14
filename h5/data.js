@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-14T21:35:51.138Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-14T22:38:30.626Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-07-14T21:35:51.138Z",
+ "lastUpdated": "2026-07-14T22:38:30.626Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2851,7 +2851,7 @@ window.WC_DATA = {
      "a": 0
     },
     "rodri": {
-     "r": 7.6,
+     "r": 7.5,
      "min": 90,
      "g": 0,
      "a": 0
