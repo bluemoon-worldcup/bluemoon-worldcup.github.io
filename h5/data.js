@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-15T23:39:29.649Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-16T01:06:53.061Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-07-15T23:39:29.649Z",
+ "lastUpdated": "2026-07-16T01:06:53.061Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2875,7 +2875,7 @@ window.WC_DATA = {
    "city": "亚特兰大",
    "stats": {
     "guehi": {
-     "r": 6.2,
+     "r": 6.3,
      "min": 90,
      "g": 0,
      "a": 0
@@ -2886,7 +2886,7 @@ window.WC_DATA = {
      "a": 0
     },
     "stones": {
-     "r": 6.2,
+     "r": 6.3,
      "min": 89,
      "g": 0,
      "a": 0
