@@ -1,7 +1,7 @@
-// 自动生成于 2026-07-19T18:08:23.665Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-07-19T19:29:50.227Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-07-19T18:08:23.665Z",
+ "lastUpdated": "2026-07-19T19:29:50.227Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
@@ -2932,9 +2932,9 @@ window.WC_DATA = {
    "away": "ARG",
    "homeP": "",
    "awayP": "",
-   "hScore": null,
-   "aScore": null,
-   "status": "scheduled",
+   "hScore": 0,
+   "aScore": 0,
+   "status": "live",
    "utc": "2026-07-19T19:00:00Z",
    "venue": "大都会人寿体育场",
    "city": "纽约(东卢瑟福)"
