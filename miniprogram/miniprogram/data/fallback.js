@@ -1,7 +1,7 @@
-// 自动生成于 2026-08-11T20:25:15.179Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-08-11T21:12:38.584Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-08-11T20:25:15.179Z",
+ "lastUpdated": "2026-08-11T21:12:38.584Z",
  "source": "fixturedownload.com + ESPN",
  "teams": {
   "MEX": {
