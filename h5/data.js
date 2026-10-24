@@ -1,7 +1,7 @@
-// 自动生成于 2026-10-24T00:55:06.138Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-10-24T05:16:14.662Z，运行 node tools/update-data.mjs 更新
 window.WC_DATA = {
  "placeholder": false,
- "lastUpdated": "2026-10-24T00:55:06.138Z",
+ "lastUpdated": "2026-10-24T05:16:14.662Z",
  "source": "fixturedownload.com",
  "teams": {
   "MEX": {
