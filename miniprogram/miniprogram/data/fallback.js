@@ -1,7 +1,7 @@
-// 自动生成于 2026-11-22T16:06:02.592Z，运行 node tools/update-data.mjs 更新
+// 自动生成于 2026-11-22T21:44:27.806Z，运行 node tools/update-data.mjs 更新
 module.exports = {
  "placeholder": false,
- "lastUpdated": "2026-11-22T16:06:02.592Z",
+ "lastUpdated": "2026-11-22T21:44:27.806Z",
  "source": "fixturedownload.com",
  "teams": {
   "MEX": {
